@@ -1,0 +1,13 @@
+/* Import all CSS files from assets */
+/* Note: In Vite, public assets are served from root, so we reference them in index.html */
+/* CSS imports are handled via link tags in index.html for better performance */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
