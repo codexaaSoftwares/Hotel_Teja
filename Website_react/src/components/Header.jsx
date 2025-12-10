@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
 
   useEffect(() => {
@@ -35,10 +34,6 @@ const Header = () => {
     }
   }
 
-  const toggleSubmenu = () => {
-    setIsSubmenuOpen(!isSubmenuOpen)
-  }
-
   const scrollToSection = (e, sectionId) => {
     e.preventDefault()
     const element = document.getElementById(sectionId)
@@ -55,23 +50,14 @@ const Header = () => {
           <div className="logo">
             <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
               <img src="/assets/images/logo.png" alt="Teja Restaurant & Hotel Logo" />
+              <span className="logo-text">Hotel Teja</span>
             </a>
           </div>
           <ul className={`menu ${isMenuOpen ? 'active' : ''}`}>
-            <li className="menu-item-has-children">
-              <a href="#" onClick={(e) => { e.preventDefault(); toggleSubmenu() }}>
-                Home
-              </a>
-              <ul className="submenu" style={{ display: isSubmenuOpen ? 'block' : 'none' }}>
-                <li>
-                  <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(e, 'home') }}>Home One</a>
-                </li>
-                <li>
-                  <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(e, 'home') }}>Home Two</a>
-                </li>
-              </ul>
+            <li>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMenuOpen(false) }}>Home</a>
             </li>
-            <li className="active">
+            <li>
               <a href="#menu" onClick={(e) => scrollToSection(e, 'menu')}>Menu</a>
             </li>
             <li>
