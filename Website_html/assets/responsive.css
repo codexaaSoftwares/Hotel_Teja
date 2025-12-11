@@ -488,6 +488,41 @@
     .service-box{
         margin-bottom: 30px;
     }
+    .rooms-section .section-description {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    .room-box .room-content {
+        padding: 25px 20px 20px;
+    }
+    .room-box .room-amenities ul {
+        grid-template-columns: 1fr;
+    }
+    .rooms-slider-section {
+        padding: 80px 0px 100px;
+    }
+    .rooms-slider-header {
+        margin-bottom: 50px;
+    }
+    .rooms-slider-header .title {
+        font-size: 36px;
+    }
+    .rooms-slider-wrapper {
+        height: 500px;
+        perspective: 1500px;
+    }
+    .room-slide-card {
+        width: 320px;
+        height: 420px;
+    }
+    .rooms-slider-nav {
+        padding: 0 10px;
+    }
+    .slider-nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
     .team-section {
         padding: 70px 0px 90px;
     }
@@ -679,6 +714,34 @@
         background-color: #ffffff;
         padding: 5px;
         border-radius: 5px;
+    }
+    .rooms-slider-section {
+        padding: 60px 0px 80px;
+    }
+    .rooms-slider-header .title {
+        font-size: 28px;
+    }
+    .rooms-slider-header .section-description {
+        font-size: 16px;
+    }
+    .rooms-slider-wrapper {
+        height: 400px;
+        perspective: 1000px;
+    }
+    .room-slide-card {
+        width: 280px;
+        height: 360px;
+    }
+    .room-slide-title {
+        font-size: 22px;
+    }
+    .room-slide-price {
+        font-size: 18px;
+    }
+    .slider-nav-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
     }
     .menu-section .opening-time .time-list::before,
     .menu-section .opening-time .time-list::after

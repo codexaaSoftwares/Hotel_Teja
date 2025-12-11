@@ -143,6 +143,99 @@
         // Wow js active
         new WOW().init();
 
+        // Rooms 3D Slider
+        var currentSlide = 0;
+        var totalSlides = $('.room-slide-card').length;
+        var autoSlideInterval;
+
+        function updateSlider(index) {
+            currentSlide = index;
+            $('.room-slide-card').each(function(i) {
+                var offset = i - currentSlide;
+                var absOffset = Math.abs(offset);
+                var isActive = offset === 0;
+                
+                var translateX = offset * 320;
+                var translateZ = -absOffset * 50;
+                var scale = 1 - absOffset * 0.15;
+                var opacity = 1 - absOffset * 0.3;
+                var rotateY = offset * 15;
+                
+                if (absOffset > 2) {
+                    opacity = 0.1;
+                    scale = 0.7;
+                }
+                
+                $(this).css({
+                    transform: 'translateX(' + translateX + 'px) translateZ(' + translateZ + 'px) scale(' + scale + ') rotateY(' + rotateY + 'deg)',
+                    opacity: Math.max(opacity, 0.1),
+                    zIndex: totalSlides - absOffset
+                });
+                
+                if (isActive) {
+                    $(this).addClass('active');
+                } else {
+                    $(this).removeClass('active');
+                }
+            });
+            
+            $('.slider-dot').removeClass('active').eq(currentSlide).addClass('active');
+        }
+        
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            updateSlider(index);
+        }
+        
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(function() {
+                goToSlide(currentSlide + 1);
+            }, 4000);
+        }
+        
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+        
+        // Initialize slider
+        if ($('.rooms-slider-3d').length) {
+            updateSlider(0);
+            startAutoSlide();
+            
+            // Navigation buttons
+            $('#roomsSliderPrev').on('click', function() {
+                stopAutoSlide();
+                goToSlide(currentSlide - 1);
+                startAutoSlide();
+            });
+            
+            $('#roomsSliderNext').on('click', function() {
+                stopAutoSlide();
+                goToSlide(currentSlide + 1);
+                startAutoSlide();
+            });
+            
+            // Dots navigation
+            $('.slider-dot').on('click', function() {
+                stopAutoSlide();
+                var slideIndex = $(this).data('slide');
+                goToSlide(slideIndex);
+                startAutoSlide();
+            });
+            
+            // Card click navigation
+            $('.room-slide-card').on('click', function() {
+                stopAutoSlide();
+                var slideIndex = $(this).data('index');
+                goToSlide(slideIndex);
+                startAutoSlide();
+            });
+            
+            // Pause on hover
+            $('.rooms-slider-wrapper').on('mouseenter', stopAutoSlide).on('mouseleave', startAutoSlide);
+        }
+
     });
 
 
