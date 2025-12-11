@@ -498,30 +498,61 @@
     .room-box .room-amenities ul {
         grid-template-columns: 1fr;
     }
-    .rooms-slider-section {
-        padding: 80px 0px 100px;
+    .rooms-banner-slider {
+        padding: 80px 0px 60px;
     }
-    .rooms-slider-header {
-        margin-bottom: 50px;
-    }
-    .rooms-slider-header .title {
-        font-size: 36px;
-    }
-    .rooms-slider-wrapper {
+    .rooms-banner-slider .rooms-slider-wrapper {
         height: 500px;
         perspective: 1500px;
     }
-    .room-slide-card {
+    .rooms-banner-slider .room-slide-card {
         width: 320px;
         height: 420px;
     }
-    .rooms-slider-nav {
+    .rooms-banner-slider .rooms-slider-nav {
         padding: 0 10px;
     }
-    .slider-nav-btn {
+    .rooms-banner-slider .slider-nav-btn {
         width: 50px;
         height: 50px;
         font-size: 18px;
+    }
+    .rooms-section .container {
+        padding: 60px 15px;
+    }
+    .room-hero-image {
+        height: 350px;
+    }
+    .room-hero-title {
+        font-size: 32px;
+    }
+    .room-hero-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .room-hero-details {
+        gap: 12px;
+    }
+    .room-hero-details .detail-item {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    .room-box-hero-image {
+        height: 350px;
+    }
+    .room-box-hero-title {
+        font-size: 26px;
+    }
+    .room-box-hero-description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .room-box-hero-details {
+        gap: 10px;
+    }
+    .room-box-hero-details .detail-item {
+        font-size: 12px;
+        padding: 8px 16px;
     }
     .team-section {
         padding: 70px 0px 90px;
@@ -715,33 +746,47 @@
         padding: 5px;
         border-radius: 5px;
     }
-    .rooms-slider-section {
-        padding: 60px 0px 80px;
+    .rooms-banner-slider {
+        padding: 60px 0px 40px;
     }
-    .rooms-slider-header .title {
-        font-size: 28px;
-    }
-    .rooms-slider-header .section-description {
-        font-size: 16px;
-    }
-    .rooms-slider-wrapper {
+    .rooms-banner-slider .rooms-slider-wrapper {
         height: 400px;
         perspective: 1000px;
     }
-    .room-slide-card {
+    .rooms-banner-slider .room-slide-card {
         width: 280px;
         height: 360px;
     }
-    .room-slide-title {
+    .rooms-banner-slider .room-slide-title {
         font-size: 22px;
     }
-    .room-slide-price {
+    .rooms-banner-slider .room-slide-price {
         font-size: 18px;
     }
-    .slider-nav-btn {
+    .rooms-banner-slider .slider-nav-btn {
         width: 45px;
         height: 45px;
         font-size: 16px;
+    }
+    .rooms-section .container {
+        padding: 40px 15px;
+    }
+    .room-hero-image {
+        height: 400px;
+    }
+    .room-hero-title {
+        font-size: 36px;
+    }
+    .room-hero-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .room-hero-details {
+        gap: 15px;
+    }
+    .room-hero-details .detail-item {
+        font-size: 14px;
+        padding: 10px 20px;
     }
     .menu-section .opening-time .time-list::before,
     .menu-section .opening-time .time-list::after

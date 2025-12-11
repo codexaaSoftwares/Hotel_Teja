@@ -3,8 +3,14 @@ import { motion } from 'framer-motion'
 const Amenities = () => {
   const amenities = [
     { icon: '/assets/images/ic1(1).png', text: 'Parking Available' },
-    { icon: '/assets/images/ic2(1).png', text: 'Kids Play Area' },
-    { icon: '/assets/images/ic3(1).png', text: 'Menu à la Carte' }
+    { icon: '/assets/images/ic3(1).png', text: 'Menu à la Carte' },
+    { icon: '/assets/images/icon1.png', text: 'Free WiFi' },
+    { icon: '/assets/images/icon2.png', text: 'AC' },
+    { icon: '/assets/images/icon3.png', text: 'TV' },
+    { icon: '/assets/images/icon4.png', text: 'Mini Fridge' },
+    { icon: '/assets/images/ic1.png', text: 'Room Service' },
+    { icon: '/assets/images/ic2.png', text: 'Bathroom' },
+    { icon: '/assets/images/ic3.png', text: 'Extra Beds' }
   ]
 
   return (

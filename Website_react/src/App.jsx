@@ -8,9 +8,10 @@ import Menu from './components/Menu'
 import Statistics from './components/Statistics'
 import Services from './components/Services'
 import Rooms from './components/Rooms'
-import Team from './components/Team'
+import BookingPlatforms from './components/BookingPlatforms'
 import Events from './components/Events'
 import Amenities from './components/Amenities'
+import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 
 function App() {
@@ -35,15 +36,35 @@ function App() {
       <div className="overlay" onClick={handleOverlayClick}></div>
       <ScrollToTop />
       <Header />
+      {/* Fixed Instagram Logo on Side - Same as Footer */}
+      <a 
+        href="https://www.instagram.com/hotel_teja_lunawada/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed-instagram-logo"
+        aria-label="Follow us on Instagram"
+      >
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+          alt="Instagram" 
+          className="instagram-logo"
+          onError={(e) => {
+            e.target.style.display = 'none';
+            e.target.nextSibling.style.display = 'inline-block';
+          }}
+        />
+        <i className="fab fa-instagram" style={{ display: 'none' }}></i>
+      </a>
       <Banner />
       <About />
-      <Menu />
+      {/* <Menu /> */}
       <Statistics />
-      <Services />
+      {/* <Services /> */}
       <Rooms />
-      <Team />
+      <BookingPlatforms />
       <Events />
-      <Amenities />
+      {/* <Amenities /> */}
+      <Gallery />
       <Footer />
     </div>
   )

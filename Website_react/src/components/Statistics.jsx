@@ -1,77 +1,71 @@
-import { useEffect, useState, useRef } from 'react'
-import Odometer from 'react-odometerjs'
-import 'odometer/themes/odometer-theme-default.css'
+import { motion } from 'framer-motion'
 
 const Statistics = () => {
-  const statsRef = useRef(null)
-  const [isVisible, setIsVisible] = useState(false)
-  const [values, setValues] = useState({
-    pizzas: 0,
-    desserts: 0,
-    salads: 0,
-    pastas: 0
-  })
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !isVisible) {
-            setIsVisible(true)
-            // Animate to final values
-            setTimeout(() => {
-              setValues({
-                pizzas: 350,
-                desserts: 447,
-                salads: 60,
-                pastas: 60
-              })
-            }, 100)
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current)
-    }
-
-    return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current)
-      }
-    }
-  }, [isVisible])
-
-  const stats = [
-    { icon: '/assets/images/stat01.png', value: values.pizzas, label: 'PIZZAS' },
-    { icon: '/assets/images/stat02.png', value: values.desserts, label: 'DESSERTS' },
-    { icon: '/assets/images/stat03.png', value: values.salads, label: 'SALADS' },
-    { icon: '/assets/images/stat04.png', value: values.pastas, label: 'PASTAS' }
+  const cuisines = [
+    { icon: '/assets/images/stat01.png', label: 'GUJARATI' },
+    { icon: '/assets/images/stat02.png', label: 'PUNJABI' },
+    { icon: '/assets/images/stat03.png', label: 'CHINESE' },
+    { icon: '/assets/images/stat04.png', label: 'SOUTH' }
   ]
 
   return (
-    <section className="statistics-section" ref={statsRef}>
+    <section className="statistics-section" id="cuisines">
       <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-8">
+            <div className="content">
+              <div className="section-header">
+                <motion.h6 
+                  className="sub-title"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  OUR CUISINES
+                </motion.h6>
+                <motion.h2 
+                  className="title"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                  A Culinary Journey Across Lunawada
+                </motion.h2>
+                <motion.p 
+                  className="text"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  Experience the rich and diverse flavors of India with our authentic cuisine selection. From the sweet and savory delights of Gujarat to the robust flavors of Punjab, the aromatic spices of Chinese cuisine, and the traditional taste of South India - we bring you the best of every region.
+                </motion.p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="statistics-wrapper">
           <div className="row">
-            {stats.map((stat, index) => (
-              <div key={index} className="col-lg-3 col-sm-6">
+            {cuisines.map((cuisine, index) => (
+              <motion.div 
+                key={index} 
+                className="col-lg-3 col-sm-6"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
                 <div className="stat-item">
                   <div className="icon">
-                    <img src={stat.icon} alt={stat.label} />
+                    <img src={cuisine.icon} alt={cuisine.label} />
                     <div className="stat-content">
-                      <h3 className="counter-item">
-                        <Odometer value={stat.value} format="(,ddd)" />
-                        <span>K</span>
-                      </h3>
-                      <span className="info">{stat.label}</span>
+                      <span className="info">{cuisine.label}</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

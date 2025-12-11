@@ -11,3 +11,279 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Instagram Logo Styling */
+.footer-section .footer-social-links ul li a .instagram-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Fixed Instagram Logo on Side - Same as Footer with 3D Animation */
+.fixed-instagram-logo {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  z-index: 999;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: float3d 4s ease-in-out infinite;
+}
+
+.fixed-instagram-logo::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  transform: translateZ(-5px);
+  opacity: 0.5;
+  animation: rotate3d 12s linear infinite;
+}
+
+.fixed-instagram-logo .instagram-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transform: translateZ(10px);
+  transition: transform 0.5s ease;
+  animation: logoRotate 8s linear infinite;
+}
+
+.fixed-instagram-logo i {
+  font-size: 20px;
+  transform: translateZ(10px);
+}
+
+.fixed-instagram-logo:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 15px 40px rgba(220, 53, 69, 0.7);
+  animation-play-state: paused;
+}
+
+.fixed-instagram-logo:hover::before {
+  animation-play-state: paused;
+}
+
+.fixed-instagram-logo:hover .instagram-logo {
+  transform: translateZ(25px) rotateZ(360deg) scale(1.2);
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-play-state: paused;
+}
+
+/* 3D Floating Animation with Rotation */
+@keyframes float3d {
+  0% {
+    transform: translateY(-50%) rotateY(0deg) rotateX(0deg) translateZ(0px);
+  }
+  25% {
+    transform: translateY(-50%) rotateY(90deg) rotateX(5deg) translateZ(10px);
+  }
+  50% {
+    transform: translateY(-50%) rotateY(180deg) rotateX(0deg) translateZ(15px);
+  }
+  75% {
+    transform: translateY(-50%) rotateY(270deg) rotateX(-5deg) translateZ(10px);
+  }
+  100% {
+    transform: translateY(-50%) rotateY(360deg) rotateX(0deg) translateZ(0px);
+  }
+}
+
+/* Logo Internal Rotation */
+@keyframes logoRotate {
+  0% {
+    transform: translateZ(10px) rotateZ(0deg);
+  }
+  100% {
+    transform: translateZ(10px) rotateZ(360deg);
+  }
+}
+
+/* 3D Shadow Rotation */
+@keyframes rotate3d {
+  0% {
+    transform: translateZ(-5px) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-5px) rotateY(360deg);
+  }
+}
+
+/* BOOK WITH US Header Link Styling */
+.header-section .menu li a.book-with-us-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 15px;
+  line-height: 1.3;
+}
+
+.header-section .menu li a.book-with-us-link .book-subtitle {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #dc3545;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.header-section .menu li a.book-with-us-link .book-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e9eeff;
+  display: block;
+  white-space: nowrap;
+}
+
+.header-section .menu li a.book-with-us-link:hover .book-subtitle {
+  color: #fff;
+}
+
+.header-section .menu li a.book-with-us-link:hover .book-title {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fixed-instagram-logo {
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .fixed-instagram-logo .instagram-logo {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .fixed-instagram-logo i {
+    font-size: 18px;
+  }
+
+  .header-section .menu li a.book-with-us-link {
+    padding: 6px 12px;
+  }
+
+  .header-section .menu li a.book-with-us-link .book-subtitle {
+    font-size: 10px;
+  }
+
+  .header-section .menu li a.book-with-us-link .book-title {
+    font-size: 12px;
+  }
+
+  /* Make Booking Platform Cards Smaller on Mobile with Proper Gap */
+  .booking-platforms-section .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .booking-platforms-section .row > [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+
+  .booking-platforms-section .platform-card {
+    margin-bottom: 0;
+  }
+
+  .booking-platforms-section .platform-card .platform-link {
+    padding: 20px 15px;
+  }
+
+  .booking-platforms-section .platform-card .platform-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .booking-platforms-section .platform-card .platform-logo .logo-text {
+    font-size: 24px;
+  }
+
+  .booking-platforms-section .platform-card .platform-name {
+    font-size: 14px;
+  }
+
+  .booking-platforms-section .platform-card .platform-badge {
+    font-size: 10px;
+  }
+
+  .booking-platforms-section .platform-card .platform-logo-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .booking-platforms-section .platform-card .platform-logo-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even Smaller Cards for Small Mobile with Gap */
+  .booking-platforms-section .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .booking-platforms-section .row > [class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 16px;
+  }
+
+  .booking-platforms-section .platform-card .platform-link {
+    padding: 15px 10px;
+  }
+
+  .booking-platforms-section .platform-card .platform-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .booking-platforms-section .platform-card .platform-logo .logo-text {
+    font-size: 20px;
+  }
+
+  .booking-platforms-section .platform-card .platform-name {
+    font-size: 12px;
+  }
+
+  .booking-platforms-section .platform-card .platform-badge {
+    font-size: 9px;
+  }
+
+  .booking-platforms-section .platform-card .platform-logo-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .booking-platforms-section .platform-card .platform-logo-img {
+    width: 75%;
+    height: 75%;
+  }
+}
+

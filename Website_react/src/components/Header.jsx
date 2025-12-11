@@ -55,25 +55,19 @@ const Header = () => {
           </div>
           <ul className={`menu ${isMenuOpen ? 'active' : ''}`}>
             <li>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMenuOpen(false) }}>Home</a>
+              <a href="#cuisines" onClick={(e) => scrollToSection(e, 'cuisines')}>Restaurant</a>
             </li>
             <li>
-              <a href="#menu" onClick={(e) => scrollToSection(e, 'menu')}>Menu</a>
+              <a href="#rooms" onClick={(e) => scrollToSection(e, 'rooms')}>Hotel & Room</a>
             </li>
             <li>
-              <a href="#service" onClick={(e) => scrollToSection(e, 'service')}>Service</a>
+              <a href="#events" onClick={(e) => scrollToSection(e, 'events')}>Banquet</a>
             </li>
             <li>
-              <a href="#events" onClick={(e) => scrollToSection(e, 'events')}>Events</a>
-            </li>
-            <li>
-              <a href="#rooms" onClick={(e) => scrollToSection(e, 'rooms')}>Rooms</a>
-            </li>
-            <li>
-              <a href="#visitus" onClick={(e) => scrollToSection(e, 'visitus')}>Visit Us</a>
-            </li>
-            <li>
-              <a href="#" className="custom-button" onClick={(e) => { e.preventDefault() }}>Book A table</a>
+              <a href="#booking" onClick={(e) => scrollToSection(e, 'booking')} className="book-with-us-link">
+                <span className="book-subtitle">BOOK WITH US</span>
+                <span className="book-title">We're Waiting For You!</span>
+              </a>
             </li>
           </ul>
           <div className={`header-bar d-lg-none ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>

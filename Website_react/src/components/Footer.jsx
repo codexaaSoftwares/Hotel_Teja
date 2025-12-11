@@ -12,10 +12,11 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { icon: 'fab fa-facebook-f', href: '#' },
-    { icon: 'fab fa-twitter', href: '#' },
-    { icon: 'fab fa-google-plus-g', href: '#' },
-    { icon: 'fab fa-linkedin-in', href: '#' }
+    { 
+      icon: 'fab fa-instagram', 
+      href: 'https://www.instagram.com/hotel_teja_lunawada/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
+    }
   ]
 
   return (
@@ -51,8 +52,18 @@ const Footer = () => {
                 <ul>
                   {socialLinks.map((social, index) => (
                     <li key={index}>
-                      <a href={social.href} onClick={(e) => { e.preventDefault() }}>
-                        <i className={social.icon}></i>
+                      <a href={social.href} target="_blank" rel="noopener noreferrer">
+                        <img 
+                          src={social.logo} 
+                          alt="Instagram" 
+                          className="instagram-logo"
+                          onError={(e) => {
+                            // Fallback to Font Awesome icon if image fails
+                            e.target.style.display = 'none';
+                            e.target.nextSibling.style.display = 'inline-block';
+                          }}
+                        />
+                        <i className={social.icon} style={{ display: 'none' }}></i>
                       </a>
                     </li>
                   ))}
@@ -80,7 +91,7 @@ const Footer = () => {
                     <img src="/assets/images/ii1.png" alt="Phone icon" />
                   </div>
                   <p>Phone Number:</p>
-                  <p>+1 111 000 111</p>
+                  <p>9104009138</p>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
@@ -89,9 +100,9 @@ const Footer = () => {
                     <img src="/assets/images/ii2.png" alt="Location icon" />
                   </div>
                   <p>
-                    17 South Sherman Street
+                    GJ SH 175, Modasa - Godhra Hwy
                     <br />
-                    Astoria, NY 11106
+                    Jesingpur, Lunawada, Gujarat 389230
                   </p>
                 </div>
               </div>
@@ -101,7 +112,7 @@ const Footer = () => {
                     <img src="/assets/images/ii3.png" alt="Email icon" />
                   </div>
                   <p>Drop us a line:</p>
-                  <p>hello@teja.com</p>
+                  <p>tejahotel11@gmail.com</p>
                 </div>
               </div>
             </div>

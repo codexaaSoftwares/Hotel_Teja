@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section className="about-section" id="restaurant">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">

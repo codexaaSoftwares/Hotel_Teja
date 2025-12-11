@@ -346,7 +346,7 @@
     .header-wrapper .menu {
         display: none;
         position: fixed;
-        background: #71b85f;
+        background: #dc3545;
         width: 100%;
         max-width: 500px;
         top: 75px;
@@ -411,7 +411,7 @@
     .header-section {
         -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        background: #71b85f;
+        background: #dc3545;
         border: none;
     }
     .banner-section2 .main-content .hero-btn{
@@ -478,6 +478,13 @@
     .statistics-section .stat-item .icon{
         margin-bottom: 30px;
     }
+    .statistics-section .section-header {
+        margin-bottom: 40px;
+    }
+    .statistics-section .section-header .text {
+        font-size: 14px;
+        line-height: 24px;
+    }
     .statistics-section {
         padding-bottom: 100px;
     }
@@ -497,33 +504,114 @@
     .room-box .room-amenities ul {
         grid-template-columns: 1fr;
     }
-    .rooms-slider-section {
-        padding: 80px 0px 100px;
+    .rooms-banner-slider {
+        padding: 80px 0px 60px;
     }
-    .rooms-slider-header {
+    .rooms-banner-slider .section-header {
         margin-bottom: 50px;
     }
-    .rooms-slider-header .title {
-        font-size: 36px;
+    .rooms-banner-slider .section-header .title {
+        font-size: 42px;
+        line-height: 52px;
     }
-    .rooms-slider-wrapper {
+    .rooms-banner-slider .rooms-slider-wrapper {
         height: 500px;
         perspective: 1500px;
     }
-    .room-slide-card {
+    .rooms-banner-slider .room-slide-card {
         width: 320px;
         height: 420px;
     }
-    .rooms-slider-nav {
+    .rooms-banner-slider .rooms-slider-nav {
         padding: 0 10px;
     }
-    .slider-nav-btn {
+    .rooms-banner-slider .slider-nav-btn {
         width: 50px;
         height: 50px;
         font-size: 18px;
     }
+    .rooms-section {
+        padding: 80px 0px 60px;
+    }
+    .room-hero-image {
+        height: 350px;
+    }
+    .room-hero-title {
+        font-size: 32px;
+    }
+    .room-hero-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .room-hero-details {
+        gap: 12px;
+    }
+    .room-hero-details .detail-item {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    .room-box-hero-image {
+        height: 350px;
+    }
+    .room-box-hero-title {
+        font-size: 26px;
+    }
+    .room-box-hero-description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .room-box-hero-details {
+        gap: 10px;
+    }
+    .room-box-hero-details .detail-item {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+    .room-image-hero-grid {
+        height: 500px;
+    }
+    .room-hero-title-grid {
+        font-size: 36px;
+    }
+    .room-hero-description-grid {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .room-hero-details-grid {
+        gap: 15px;
+    }
+    .room-hero-details-grid .detail-item {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
     .team-section {
         padding: 70px 0px 90px;
+    }
+    .booking-platforms-section {
+        padding: 80px 0px 80px;
+    }
+    .booking-platforms-section .section-header {
+        margin-bottom: 50px;
+    }
+    .booking-platforms-section .section-description {
+        font-size: 15px;
+        line-height: 26px;
+    }
+    .platform-card {
+        margin-bottom: 30px;
+    }
+    .platform-card .platform-link {
+        padding: 35px 25px;
+    }
+    .platform-card .platform-logo {
+        width: 100px;
+        height: 100px;
+    }
+    .platform-card .platform-logo .logo-text {
+        font-size: 36px;
+    }
+    .platform-card .platform-name {
+        font-size: 20px;
     }
     .event-section .main-content{
         text-align: center;
@@ -666,6 +754,27 @@
 
 
 @media (max-width: 767px) {
+    .room-image-hero-grid {
+        height: 450px;
+    }
+    .room-hero-overlay-grid {
+        padding: 40px 30px;
+    }
+    .room-hero-title-grid {
+        font-size: 32px;
+    }
+    .room-hero-description-grid {
+        font-size: 15px;
+        line-height: 24px;
+        max-width: 100%;
+    }
+    .room-hero-details-grid {
+        gap: 12px;
+    }
+    .room-hero-details-grid .detail-item {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
     .menu-section .menu-tab-area .shape-2{
         display: none;
     }
@@ -690,6 +799,26 @@
 }
 
 @media (max-width: 575px) {
+    .room-image-hero-grid {
+        height: 400px;
+    }
+    .room-hero-overlay-grid {
+        padding: 30px 20px;
+    }
+    .room-hero-title-grid {
+        font-size: 28px;
+    }
+    .room-hero-description-grid {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .room-hero-details-grid {
+        gap: 10px;
+    }
+    .room-hero-details-grid .detail-item {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
     .about-section .img .bg-shape{
         animation: none;
     }
@@ -714,33 +843,54 @@
         padding: 5px;
         border-radius: 5px;
     }
-    .rooms-slider-section {
-        padding: 60px 0px 80px;
+    .rooms-banner-slider {
+        padding: 60px 0px 40px;
     }
-    .rooms-slider-header .title {
-        font-size: 28px;
-    }
-    .rooms-slider-header .section-description {
-        font-size: 16px;
-    }
-    .rooms-slider-wrapper {
+    .rooms-banner-slider .rooms-slider-wrapper {
         height: 400px;
         perspective: 1000px;
     }
-    .room-slide-card {
+    .rooms-banner-slider .room-slide-card {
         width: 280px;
         height: 360px;
     }
-    .room-slide-title {
-        font-size: 22px;
+    .rooms-banner-slider .section-header {
+        margin-bottom: 40px;
     }
-    .room-slide-price {
-        font-size: 18px;
+    .rooms-banner-slider .section-header .title {
+        font-size: 36px;
+        line-height: 46px;
     }
-    .slider-nav-btn {
+    .rooms-banner-slider .section-header .sub-title {
+        font-size: 14px;
+    }
+    .rooms-banner-slider .slider-nav-btn {
         width: 45px;
         height: 45px;
         font-size: 16px;
+    }
+    .rooms-section {
+        padding: 60px 0px 40px;
+    }
+    .rooms-section .container {
+        padding: 0px 15px;
+    }
+    .room-hero-image {
+        height: 400px;
+    }
+    .room-hero-title {
+        font-size: 36px;
+    }
+    .room-hero-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .room-hero-details {
+        gap: 15px;
+    }
+    .room-hero-details .detail-item {
+        font-size: 14px;
+        padding: 10px 20px;
     }
     .menu-section .opening-time .time-list::before,
     .menu-section .opening-time .time-list::after
@@ -797,6 +947,46 @@
     {
         border-radius: 50px;
     }
+    .statistics-section .section-header {
+        margin-bottom: 30px;
+    }
+    .statistics-section .section-header .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .statistics-section .section-header .text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .booking-platforms-section {
+        padding: 60px 0px 60px;
+    }
+    .booking-platforms-section .section-header {
+        margin-bottom: 40px;
+    }
+    .booking-platforms-section .section-description {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .platform-card {
+        margin-bottom: 25px;
+    }
+    .platform-card .platform-link {
+        padding: 30px 20px;
+    }
+    .platform-card .platform-logo {
+        width: 90px;
+        height: 90px;
+    }
+    .platform-card .platform-logo .logo-text {
+        font-size: 32px;
+    }
+    .platform-card .platform-name {
+        font-size: 18px;
+    }
+    .platform-card .platform-badge {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -828,6 +1018,25 @@
     }
     .menu-section .opening-time .time-list li:last-child{
         margin-bottom: 0px;
+    }
+    .booking-platforms-section {
+        padding: 50px 0px 50px;
+    }
+    .platform-card .platform-link {
+        padding: 25px 15px;
+    }
+    .platform-card .platform-logo {
+        width: 80px;
+        height: 80px;
+    }
+    .platform-card .platform-logo .logo-text {
+        font-size: 28px;
+    }
+    .platform-card .platform-name {
+        font-size: 16px;
+    }
+    .platform-card .platform-badge {
+        font-size: 11px;
     }
 
 }

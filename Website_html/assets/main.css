@@ -2490,14 +2490,32 @@ input[type=submit] {
   transform: translateY(-5px);
 }
 
-/* Rooms-Slider-Section Starts Here*/
-.rooms-slider-section {
-  padding: 130px 0px 150px;
+/* Rooms-Section Starts Here*/
+.rooms-section {
+  padding: 0;
+  background: url("../images/servicebg.jpg");
+  position: relative;
+  overflow: hidden;
+}
+.rooms-section::after {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 0px;
+  height: 280px;
+  width: 100%;
+  background: #e4f0fa;
+}
+
+/* Full Width 3D Banner Slider */
+.rooms-banner-slider {
+  width: 100%;
+  padding: 130px 0px 100px;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   position: relative;
   overflow: hidden;
 }
-.rooms-slider-section::before {
+.rooms-banner-slider::before {
   content: '';
   position: absolute;
   top: 0;
@@ -2510,42 +2528,7 @@ input[type=submit] {
   background-position: center;
 }
 
-.rooms-slider-container {
-  max-width: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
-.rooms-slider-header {
-  text-align: center;
-  margin-bottom: 80px;
-  padding: 0 20px;
-}
-.rooms-slider-header .sub-title {
-  color: #d4a574;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-.rooms-slider-header .title {
-  color: #fff;
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-.rooms-slider-header .section-description {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.rooms-slider-wrapper {
+.rooms-banner-slider .rooms-slider-wrapper {
   width: 100%;
   height: 600px;
   perspective: 2000px;
@@ -2553,6 +2536,7 @@ input[type=submit] {
   margin: 0 auto;
   position: relative;
   overflow: visible;
+  z-index: 2;
 }
 
 .rooms-slider-3d {
@@ -2623,7 +2607,7 @@ input[type=submit] {
   letter-spacing: 1px;
 }
 
-.rooms-slider-dots {
+.rooms-banner-slider .rooms-slider-dots {
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -2652,7 +2636,7 @@ input[type=submit] {
   border-radius: 6px;
 }
 
-.rooms-slider-nav {
+.rooms-banner-slider .rooms-slider-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -2688,12 +2672,10 @@ input[type=submit] {
   transform: scale(0.95);
 }
 
-/* Rooms-Section Starts Here (Old - keeping for backward compatibility) */
-.rooms-section {
-  padding: 130px 0px 100px;
-  background: url("../images/servicebg.jpg");
+.rooms-section .container {
+  padding: 100px 15px;
   position: relative;
-  overflow: hidden;
+  z-index: 3;
 }
 .rooms-section::after {
   position: absolute;
@@ -2732,6 +2714,172 @@ input[type=submit] {
 .room-box:hover {
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
   transform: translateY(-8px);
+}
+/* Full Width Hero Room */
+.room-box-fullwidth-hero {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all ease 0.3s;
+}
+.room-box-fullwidth-hero:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+.room-hero-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.room-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.room-box-fullwidth-hero:hover .room-hero-image img {
+  transform: scale(1.05);
+}
+.room-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.room-hero-content {
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+}
+.room-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.room-hero-description {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.room-hero-details {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.room-hero-details .detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.room-hero-details .detail-item i {
+  color: #d4a574;
+  font-size: 18px;
+}
+
+/* Grid Hero Rooms (Family & Standard) */
+.room-box-hero {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all ease 0.3s;
+  height: 100%;
+}
+.room-box-hero:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+.room-box-hero-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.room-box-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.room-box-hero:hover .room-box-hero-image img {
+  transform: scale(1.05);
+}
+.room-box-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.room-box-hero-content {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+.room-box-hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.room-box-hero-description {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.room-box-hero-details {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.room-box-hero-details .detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.room-box-hero-details .detail-item i {
+  color: #d4a574;
+  font-size: 16px;
 }
 .room-box .room-image {
   position: relative;

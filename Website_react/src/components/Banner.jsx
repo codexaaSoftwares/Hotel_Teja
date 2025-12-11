@@ -43,12 +43,18 @@ const Banner = () => {
                 Amazing Experience
               </motion.h1>
               <motion.a 
-                href="#" 
+                href="#booking" 
                 className="hero-btn"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                onClick={(e) => { e.preventDefault() }}
+                onClick={(e) => {
+                  e.preventDefault()
+                  const element = document.getElementById('booking')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
               >
                 Book With Confidence
               </motion.a>

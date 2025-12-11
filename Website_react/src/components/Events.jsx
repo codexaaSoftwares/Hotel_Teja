@@ -1,14 +1,28 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState('tabone')
 
   const eventTabs = [
-    { id: 'tabone', icon: '/assets/images/ic1.png' },
-    { id: 'tabtwo', icon: '/assets/images/ic2.png' },
-    { id: 'tabthree', icon: '/assets/images/ic3.png' }
+    { 
+      id: 'tabone', 
+      icon: '/assets/images/ic1.png',
+      image: '/assets/images/event1.png'
+    },
+    { 
+      id: 'tabtwo', 
+      icon: '/assets/images/ic2.png',
+      image: '/assets/images/service1.jpg'
+    },
+    { 
+      id: 'tabthree', 
+      icon: '/assets/images/ic3.png',
+      image: '/assets/images/service2.jpg'
+    }
   ]
+
+  const activeEvent = eventTabs.find(tab => tab.id === activeTab) || eventTabs[0]
 
   return (
     <section className="event-section" id="events">
@@ -64,21 +78,22 @@ const Events = () => {
           </div>
           <div className="col-lg-8">
             <div className="main-content">
-              <a href="#" className="book-btn" onClick={(e) => { e.preventDefault() }}>
-                Book Now <img src="/assets/images/icon.png" alt="Book icon" />
-              </a>
               <div className="tab-content">
-                {eventTabs.map((tab) => (
-                  <div
-                    key={tab.id}
-                    className={`tab-pane fade ${activeTab === tab.id ? 'show active' : ''}`}
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeTab}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.5 }}
+                    className="tab-pane active"
                     role="tabpanel"
                   >
                     <div className="event-img">
-                      <img src="/assets/images/event1.png" alt="Event" />
+                      <img src={activeEvent.image} alt="Event" />
                     </div>
-                  </div>
-                ))}
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
           </div>
