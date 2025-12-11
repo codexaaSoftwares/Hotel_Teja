@@ -101,7 +101,7 @@ const Gallery = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                   >
-                    Experience Luxury & Comfort
+                    Experience Luxury, Comfort & Culinary Delights
                   </motion.h2>
                 </div>
               </div>

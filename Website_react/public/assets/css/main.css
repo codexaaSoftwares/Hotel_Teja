@@ -1301,6 +1301,7 @@ input[type=submit] {
 }
 .footer-section .top-area {
   text-align: center;
+  margin-bottom: 60px;
 }
 .footer-section .top-area .logo {
   display: inline-block;
@@ -1308,12 +1309,16 @@ input[type=submit] {
   padding: 15px 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
 }
 .footer-section .top-area .logo img {
   max-width: 190px;
+  height: auto;
+  display: block;
 }
 .footer-section .footer-social-links {
   margin-top: 35px;
+  text-align: center;
 }
 .footer-section .footer-social-links .label {
   display: inline-block;
@@ -1322,8 +1327,10 @@ input[type=submit] {
 }
 .footer-section .footer-social-links ul {
   display: inline-block;
-  text-align: right;
+  text-align: center;
   padding-left: 10px;
+  margin: 0;
+  vertical-align: middle;
 }
 .footer-section .footer-social-links ul li {
   margin-left: 6px;
@@ -1349,11 +1356,20 @@ input[type=submit] {
 .footer-section .footer-social-links ul li a i {
   font-size: 20px;
 }
+.footer-section .footer-social-links ul li a .instagram-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
 .footer-section .footer-social-links ul li a:hover {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: #fff;
   border: 1px solid transparent;
   transform: scale(1.1);
+}
+.footer-section .footer-social-links ul li a:hover .instagram-logo {
+  filter: brightness(0) invert(1);
 }
 .footer-section .newslater-wrapper {
   text-align: center;
@@ -1391,15 +1407,24 @@ input[type=submit] {
 }
 .footer-section .info-box {
   text-align: center;
+  margin-bottom: 30px;
 }
 .footer-section .info-box .icon {
   margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-section .info-box .icon img {
   height: 60px;
+  width: auto;
 }
 .footer-section .info-box p {
   color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.footer-section .info-box p:last-child {
   margin-bottom: 0px;
 }
 .footer-section .copyright-text {

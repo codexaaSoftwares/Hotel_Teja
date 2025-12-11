@@ -1,15 +1,6 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Footer = () => {
-  const [email, setEmail] = useState('')
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle newsletter subscription
-    console.log('Newsletter subscription:', email)
-    setEmail('')
-  }
 
   const socialLinks = [
     { 
@@ -69,18 +60,6 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="newslater-wrapper">
-              <form className="newslater-form" onSubmit={handleSubmit}>
-                <input 
-                  type="email" 
-                  placeholder="Your Email Address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <button type="submit">Subscribe</button>
-              </form>
             </div>
           </div>
           <div className="col-md-8">
