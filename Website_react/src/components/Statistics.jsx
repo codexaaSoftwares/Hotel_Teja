@@ -4,8 +4,8 @@ const Statistics = () => {
   const cuisines = [
     { icon: '/assets/images/stat01.png', label: 'GUJARATI' },
     { icon: '/assets/images/stat02.png', label: 'PUNJABI' },
-    { icon: '/assets/images/stat03.png', label: 'CHINESE' },
-    { icon: '/assets/images/stat04.png', label: 'SOUTH' }
+    { icon: '/assets/images/stat03.png', label: 'SOUTH' },
+    { icon: '/assets/images/stat04.png', label: 'CHINESE' }
   ]
 
   return (

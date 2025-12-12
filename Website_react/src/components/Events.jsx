@@ -8,17 +8,17 @@ const Events = () => {
     { 
       id: 'tabone', 
       icon: '/assets/images/ic1.png',
-      image: '/assets/images/event1.png'
+      image: '/assets/images/hall 1.jpg'
     },
     { 
       id: 'tabtwo', 
       icon: '/assets/images/ic2.png',
-      image: '/assets/images/service1.jpg'
+      image: '/assets/images/hall 2.jpg'
     },
     { 
       id: 'tabthree', 
       icon: '/assets/images/ic3.png',
-      image: '/assets/images/service2.jpg'
+      image: '/assets/images/banquet hall.jpg'
     }
   ]
 
@@ -68,7 +68,7 @@ const Events = () => {
                       href={`#${tab.id}`}
                     >
                       <div className="icon">
-                        <img src={tab.icon} alt={`Event type ${tab.id}`} />
+                        <img src={tab.image} alt={`Event type ${tab.id}`} />
                       </div>
                     </a>
                   </li>

@@ -63,12 +63,6 @@ const Header = () => {
             <li>
               <a href="#events" onClick={(e) => scrollToSection(e, 'events')}>Banquet</a>
             </li>
-            <li>
-              <a href="#booking" onClick={(e) => scrollToSection(e, 'booking')} className="book-with-us-link">
-                <span className="book-subtitle">BOOK WITH US</span>
-                <span className="book-title">We're Waiting For You!</span>
-              </a>
-            </li>
           </ul>
           <div className={`header-bar d-lg-none ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
             <span></span>
