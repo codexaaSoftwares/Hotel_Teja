@@ -12,13 +12,13 @@ const Footer = () => {
 
   return (
     <footer className="footer-section">
-      <img className="shape" src="/assets/images/footer-shape.png" alt="Footer decorative shape" />
+      <img className="shape" src="/assets/images/footer-shape.png" alt="Teja Hotel & Restaurant footer decorative shape" />
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-8">
             <div className="top-area">
               <div className="logo">
-                <img src="/assets/images/logo.png" alt="Teja Restaurant & Hotel Logo" />
+                <img src="/assets/images/logo.png" alt="Teja Hotel & Restaurant Lunawada Logo" />
               </div>
               <div className="footer-social-links">
                 <span className="label">Follow us :</span>
@@ -28,7 +28,7 @@ const Footer = () => {
                       <a href={social.href} target="_blank" rel="noopener noreferrer">
                         <img 
                           src={social.logo} 
-                          alt="Instagram" 
+                          alt="Follow Teja Hotel & Restaurant Lunawada on Instagram" 
                           className="instagram-logo"
                           onError={(e) => {
                             // Fallback to Font Awesome icon if image fails
@@ -49,7 +49,7 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6">
                 <div className="info-box">
                   <div className="icon">
-                    <img src="/assets/images/ii1.png" alt="Phone icon" />
+                    <img src="/assets/images/ii1.png" alt="Contact Teja Hotel Lunawada - Phone icon" />
                   </div>
                   <p>Phone Number:</p>
                   <p>9104009138</p>
@@ -58,7 +58,7 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6">
                 <div className="info-box">
                   <div className="icon">
-                    <img src="/assets/images/ii2.png" alt="Location icon" />
+                    <img src="/assets/images/ii2.png" alt="Teja Hotel location in Lunawada, Mahisagar - Location icon" />
                   </div>
                   <p>
                     GJ SH 175, Modasa - Godhra Hwy
@@ -70,7 +70,7 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6">
                 <div className="info-box">
                   <div className="icon">
-                    <img src="/assets/images/ii3.png" alt="Email icon" />
+                    <img src="/assets/images/ii3.png" alt="Contact Teja Hotel Lunawada - Email icon" />
                   </div>
                   <p>Drop us a line:</p>
                   <p>tejahotel11@gmail.com</p>

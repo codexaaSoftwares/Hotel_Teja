@@ -10,35 +10,35 @@ const Gallery = () => {
   const galleryImages = [
     {
       image: '/assets/images/J_J_5854.JPG',
-      alt: 'Hotel Gallery Image 1'
+      alt: 'Teja Hotel & Restaurant gallery - Interior view in Lunawada, Mahisagar'
     },
     {
       image: '/assets/images/J_J_5857.JPG',
-      alt: 'Hotel Gallery Image 2'
+      alt: 'Teja Hotel gallery - Dining area and ambiance in Lunawada'
     },
     {
       image: '/assets/images/J_J_5868.JPG',
-      alt: 'Hotel Gallery Image 3'
+      alt: 'Teja Restaurant gallery - Modern dining space in Lunawada, Gujarat'
     },
     {
       image: '/assets/images/J_J_5874.JPG',
-      alt: 'Hotel Gallery Image 4'
+      alt: 'Teja Hotel gallery - Hotel facilities and rooms in Lunawada'
     },
     {
       image: '/assets/images/J_J_5853.JPG',
-      alt: 'Hotel Gallery Image 5'
+      alt: 'Teja Restaurant gallery - Food presentation and dining experience in Lunawada'
     },
     {
       image: '/assets/images/J_J_5877.JPG',
-      alt: 'Hotel Gallery Image 6'
+      alt: 'Teja Hotel gallery - Accommodation and amenities in Lunawada, Mahisagar'
     },
     {
       image: '/assets/images/J_J_5848.JPG',
-      alt: 'Hotel Gallery Image 7'
+      alt: 'Teja Hotel & Restaurant gallery - Event space and banquet hall in Lunawada'
     },
     {
       image: '/assets/images/J_J_5842.JPG',
-      alt: 'Hotel Gallery Image 8'
+      alt: 'Teja Hotel gallery - Hotel exterior and facilities in Lunawada, Gujarat'
     }
   ]
 

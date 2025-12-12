@@ -1,8 +1,21 @@
 import { motion } from 'framer-motion'
+import { Helmet } from 'react-helmet-async'
 
 const About = () => {
   return (
-    <section className="about-section" id="restaurant">
+    <>
+      <Helmet>
+        <title>About Teja Hotel & Restaurant Lunawada | Best Hotel & Dining in Mahisagar</title>
+        <meta name="description" content="Learn about Teja Hotel & Restaurant in Lunawada, Mahisagar. Experience contemporary elegance, innovative cuisine, and excellent service. Ideal for business meetings, romantic evenings, and family dining." />
+        <meta name="keywords" content="about Teja Hotel Lunawada, Teja Restaurant Lunawada, hotel restaurant Mahisagar, dining Lunawada" />
+        <link rel="canonical" href="https://YOUR_DOMAIN_HERE/#restaurant" />
+        <meta property="og:title" content="About Teja Hotel & Restaurant Lunawada | Best Hotel & Dining in Mahisagar" />
+        <meta property="og:description" content="Learn about Teja Hotel & Restaurant in Lunawada, Mahisagar. Experience contemporary elegance, innovative cuisine, and excellent service." />
+        <meta property="og:url" content="https://YOUR_DOMAIN_HERE/#restaurant" />
+        <meta name="twitter:title" content="About Teja Hotel & Restaurant Lunawada | Best Hotel & Dining in Mahisagar" />
+        <meta name="twitter:description" content="Learn about Teja Hotel & Restaurant in Lunawada, Mahisagar. Experience contemporary elegance, innovative cuisine, and excellent service." />
+      </Helmet>
+      <section className="about-section" id="restaurant">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -42,7 +55,7 @@ const About = () => {
             <div className="img">
               <motion.img 
                 src="/assets/images/J_J_5849.JPG" 
-                alt="Hotel Teja Restaurant Interior" 
+                alt="Teja Hotel & Restaurant interior in Lunawada, Mahisagar - Modern dining space" 
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -54,6 +67,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

@@ -13,6 +13,7 @@ import Events from './components/Events'
 import Amenities from './components/Amenities'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
+import StructuredData from './components/StructuredData'
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+      <StructuredData />
       <Preloader />
       <div className="overlay" onClick={handleOverlayClick}></div>
       <ScrollToTop />

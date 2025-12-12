@@ -1,0 +1,26 @@
+# robots.txt for Teja Hotel & Restaurant
+# https://YOUR_DOMAIN_HERE/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow all public pages
+Allow: /
+Allow: /#rooms
+Allow: /#menu
+Allow: /#restaurant
+Allow: /#gallery
+Allow: /#events
+Allow: /#about
+
+# Sitemap location
+Sitemap: https://YOUR_DOMAIN_HERE/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1
+

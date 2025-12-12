@@ -59,7 +59,7 @@ const Statistics = () => {
               >
                 <div className="stat-item">
                   <div className="icon">
-                    <img src={cuisine.icon} alt={cuisine.label} />
+                    <img src={cuisine.icon} alt={`${cuisine.label} cuisine at Teja Restaurant Lunawada, Mahisagar`} />
                     <div className="stat-content">
                       <span className="info">{cuisine.label}</span>
                     </div>

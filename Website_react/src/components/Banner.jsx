@@ -5,6 +5,7 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { useRef, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const Banner = () => {
   const swiperRef = useRef(null)
@@ -71,8 +72,20 @@ const Banner = () => {
   }, [])
 
   return (
-    <section className="banner-section banner-slider-section">
-      <div className="banner-slider-wrapper">
+    <>
+      <Helmet>
+        <title>Teja Hotel & Restaurant Lunawada | Best Hotel & Gujarati Food in Mahisagar</title>
+        <meta name="description" content="Teja Hotel & Restaurant in Lunawada, Mahisagar, Gujarat - Best hotel near Godhra-Lunawada highway. Experience authentic Gujarati, Punjabi, Chinese & South Indian cuisine. Book comfortable rooms and enjoy fine dining." />
+        <meta name="keywords" content="Teja Hotel Lunawada, hotel in Lunawada, restaurant in Lunawada Mahisagar, Gujarati food Lunawada, best hotel near Godhra-Lunawada highway" />
+        <link rel="canonical" href="https://YOUR_DOMAIN_HERE" />
+        <meta property="og:title" content="Teja Hotel & Restaurant Lunawada | Best Hotel & Gujarati Food in Mahisagar" />
+        <meta property="og:description" content="Teja Hotel & Restaurant in Lunawada, Mahisagar, Gujarat - Best hotel near Godhra-Lunawada highway. Experience authentic Gujarati, Punjabi, Chinese & South Indian cuisine." />
+        <meta property="og:url" content="https://YOUR_DOMAIN_HERE" />
+        <meta name="twitter:title" content="Teja Hotel & Restaurant Lunawada | Best Hotel & Gujarati Food in Mahisagar" />
+        <meta name="twitter:description" content="Teja Hotel & Restaurant in Lunawada, Mahisagar, Gujarat - Best hotel near Godhra-Lunawada highway. Experience authentic Gujarati, Punjabi, Chinese & South Indian cuisine." />
+      </Helmet>
+      <section className="banner-section banner-slider-section">
+        <div className="banner-slider-wrapper">
         <Swiper
           ref={swiperRef}
           modules={[Autoplay, EffectFade, Pagination, Navigation]}
@@ -164,6 +177,7 @@ const Banner = () => {
         </Swiper>
       </div>
     </section>
+    </>
   )
 }
 

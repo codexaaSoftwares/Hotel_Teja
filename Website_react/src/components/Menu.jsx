@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Helmet } from 'react-helmet-async'
 import { menuData } from '../data/menuData'
 
 const Menu = () => {
@@ -34,8 +35,20 @@ const Menu = () => {
   ]
 
   return (
-    <section className="menu-section" id="menu">
-      <img className="shape1" src="/assets/images/menu-left.png" alt="Decorative shape" />
+    <>
+      <Helmet>
+        <title>Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant</title>
+        <meta name="description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine. Book a table today." />
+        <meta name="keywords" content="restaurant menu Lunawada, Gujarati food Lunawada, Punjabi food Lunawada, Chinese food Lunawada, South Indian food Lunawada, Teja Restaurant menu" />
+        <link rel="canonical" href="https://YOUR_DOMAIN_HERE/#menu" />
+        <meta property="og:title" content="Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant" />
+        <meta property="og:description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine." />
+        <meta property="og:url" content="https://YOUR_DOMAIN_HERE/#menu" />
+        <meta name="twitter:title" content="Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant" />
+        <meta name="twitter:description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine." />
+      </Helmet>
+      <section className="menu-section" id="menu">
+        <img className="shape1" src="/assets/images/menu-left.png" alt="Decorative shape for Teja Restaurant menu section" />
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
@@ -63,7 +76,7 @@ const Menu = () => {
                     </motion.h2>
                   </div>
                   <div className="menu-tab-area">
-                    <img className="shape-2" src="/assets/images/menu-right.png" alt="Decorative shape" />
+                    <img className="shape-2" src="/assets/images/menu-right.png" alt="Decorative shape for Teja Restaurant menu" />
                     <ul className="nav" role="tablist">
                       {tabs.map((tab) => (
                         <li key={tab.id} className="nav-item" role="presentation">
@@ -76,7 +89,7 @@ const Menu = () => {
                             role="tab"
                             href={`#${tab.id}`}
                           >
-                            <img src={tab.icon} alt={tab.label} />
+                            <img src={tab.icon} alt={`${tab.label} icon at Teja Restaurant Lunawada`} />
                             {tab.label}
                           </a>
                         </li>
@@ -130,6 +143,7 @@ const Menu = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 
