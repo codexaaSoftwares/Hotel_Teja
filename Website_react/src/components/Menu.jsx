@@ -37,15 +37,10 @@ const Menu = () => {
   return (
     <>
       <Helmet>
-        <title>Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant</title>
-        <meta name="description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine. Book a table today." />
-        <meta name="keywords" content="restaurant menu Lunawada, Gujarati food Lunawada, Punjabi food Lunawada, Chinese food Lunawada, South Indian food Lunawada, Teja Restaurant menu" />
+        {/* Meta tags only - title is set by main page Banner component */}
+        <meta name="description" content="Best Punjabi food in Lunawada and Mahisagar. Teja Restaurant offers authentic Punjabi food, Gujarati cuisine, Chinese dishes, and South Indian food. Explore our menu and book a table today." />
+        <meta name="keywords" content="Punjabi food Lunawada, Punjabi food Mahisagar, best Punjabi food Lunawada, restaurant menu Lunawada, Gujarati food Lunawada, Chinese food Lunawada, South Indian food Lunawada, Teja Restaurant menu, Punjabi thali Lunawada" />
         <link rel="canonical" href="https://www.hotelteja.in/#menu" />
-        <meta property="og:title" content="Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant" />
-        <meta property="og:description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine." />
-        <meta property="og:url" content="https://www.hotelteja.in/#menu" />
-        <meta name="twitter:title" content="Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant" />
-        <meta name="twitter:description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine." />
       </Helmet>
       <section className="menu-section" id="menu">
         <img className="shape1" src="/assets/images/menu-left.png" alt="Decorative shape for Teja Restaurant menu section" />

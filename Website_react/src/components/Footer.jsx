@@ -65,6 +65,17 @@ const Footer = () => {
                     <br />
                     Jesingpur, Lunawada, Gujarat 389230
                   </p>
+                  <p style={{ marginTop: '10px' }}>
+                    <a 
+                      href="https://www.google.com/maps?q=23.1284,73.6107" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      style={{ color: '#fff', textDecoration: 'underline' }}
+                      aria-label="View Teja Hotel & Restaurant on Google Maps"
+                    >
+                      View on Google Maps
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">

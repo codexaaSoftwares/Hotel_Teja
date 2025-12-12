@@ -74,9 +74,9 @@ const Banner = () => {
   return (
     <>
       <Helmet>
-        <title>Teja Hotel & Restaurant Lunawada | Best Hotel & Gujarati Food in Mahisagar</title>
-        <meta name="description" content="Teja Hotel & Restaurant in Lunawada, Mahisagar, Gujarat - Best hotel near Godhra-Lunawada highway. Experience authentic Gujarati, Punjabi, Chinese & South Indian cuisine. Book comfortable rooms and enjoy fine dining." />
-        <meta name="keywords" content="Teja Hotel Lunawada, hotel in Lunawada, restaurant in Lunawada Mahisagar, Gujarati food Lunawada, best hotel near Godhra-Lunawada highway" />
+        <title>Best Hotel in Lunawada & Mahisagar | Event Hall & Birthday Party Venue | Punjabi Food</title>
+        <meta name="description" content="Best hotel in Lunawada and Mahisagar. Teja Hotel offers comfortable rooms, authentic Punjabi food, event hall, and birthday party hall. Perfect venue for events near Godhra-Lunawada highway." />
+        <meta name="keywords" content="hotel in Lunawada, hotel in Mahisagar, best hotel in Lunawada, best hotel in Mahisagar, best hotel, Punjabi food Lunawada, event hall Lunawada, birthday party hall Lunawada, banquet hall Lunawada, Teja Hotel Lunawada" />
         <link rel="canonical" href="https://www.hotelteja.in" />
         <meta property="og:title" content="Teja Hotel & Restaurant Lunawada | Best Hotel & Gujarati Food in Mahisagar" />
         <meta property="og:description" content="Teja Hotel & Restaurant in Lunawada, Mahisagar, Gujarat - Best hotel near Godhra-Lunawada highway. Experience authentic Gujarati, Punjabi, Chinese & South Indian cuisine." />

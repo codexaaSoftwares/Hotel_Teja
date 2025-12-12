@@ -41,15 +41,10 @@ const Rooms = () => {
   return (
     <>
       <Helmet>
-        <title>Hotel Rooms in Lunawada | Deluxe, Family & Standard AC Rooms - Teja Hotel</title>
+        {/* Meta tags only - title is set by main page Banner component */}
         <meta name="description" content="Book comfortable hotel rooms in Lunawada, Mahisagar. Teja Hotel offers Deluxe Rooms, Family Rooms, and Standard AC Rooms with modern amenities. Best hotel near Godhra-Lunawada highway." />
         <meta name="keywords" content="hotel rooms Lunawada, deluxe rooms Lunawada, family rooms Lunawada, AC rooms Lunawada, hotel accommodation Lunawada, Teja Hotel rooms" />
         <link rel="canonical" href="https://www.hotelteja.in/#rooms" />
-        <meta property="og:title" content="Hotel Rooms in Lunawada | Deluxe, Family & Standard AC Rooms - Teja Hotel" />
-        <meta property="og:description" content="Book comfortable hotel rooms in Lunawada, Mahisagar. Teja Hotel offers Deluxe Rooms, Family Rooms, and Standard AC Rooms with modern amenities." />
-        <meta property="og:url" content="https://www.hotelteja.in/#rooms" />
-        <meta name="twitter:title" content="Hotel Rooms in Lunawada | Deluxe, Family & Standard AC Rooms - Teja Hotel" />
-        <meta name="twitter:description" content="Book comfortable hotel rooms in Lunawada, Mahisagar. Teja Hotel offers Deluxe Rooms, Family Rooms, and Standard AC Rooms with modern amenities." />
       </Helmet>
       <section className="rooms-section" id="rooms">
       {/* Detailed Rooms Section */}

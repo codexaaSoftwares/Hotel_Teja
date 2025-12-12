@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Helmet } from 'react-helmet-async'
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState('tabone')
@@ -25,7 +26,14 @@ const Events = () => {
   const activeEvent = eventTabs.find(tab => tab.id === activeTab) || eventTabs[0]
 
   return (
-    <section className="event-section" id="events">
+    <>
+      <Helmet>
+        {/* Meta tags only - title is set by main page Banner component */}
+        <meta name="description" content="Best event hall and birthday party hall in Lunawada, Mahisagar. Teja Hotel offers spacious banquet facilities for birthday parties, ring ceremonies, corporate meetings, and special events." />
+        <meta name="keywords" content="event hall Lunawada, event hall Mahisagar, birthday party hall Lunawada, birthday party hall Mahisagar, banquet hall Lunawada, event venue Lunawada, party hall Lunawada, wedding hall Lunawada" />
+        <link rel="canonical" href="https://www.hotelteja.in/#events" />
+      </Helmet>
+      <section className="event-section" id="events">
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-lg-3 d-flex flex-column justify-content-between">
@@ -68,7 +76,7 @@ const Events = () => {
                       href={`#${tab.id}`}
                     >
                       <div className="icon">
-                        <img src={tab.image} alt={`Event type ${tab.id}`} />
+                        <img src={tab.image} alt={`Event hall and banquet facility at Teja Hotel Lunawada, Mahisagar - ${tab.id}`} />
                       </div>
                     </a>
                   </li>
@@ -90,7 +98,7 @@ const Events = () => {
                     role="tabpanel"
                   >
                     <div className="event-img">
-                      <img src={activeEvent.image} alt="Event" />
+                      <img src={activeEvent.image} alt="Event hall and birthday party venue at Teja Hotel Lunawada, Mahisagar" />
                     </div>
                   </motion.div>
                 </AnimatePresence>
@@ -100,6 +108,7 @@ const Events = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

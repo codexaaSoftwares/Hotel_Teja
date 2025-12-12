@@ -5,15 +5,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Teja Hotel & Restaurant Lunawada | Best Hotel & Dining in Mahisagar</title>
+        {/* Meta tags only - title is set by main page Banner component */}
         <meta name="description" content="Learn about Teja Hotel & Restaurant in Lunawada, Mahisagar. Experience contemporary elegance, innovative cuisine, and excellent service. Ideal for business meetings, romantic evenings, and family dining." />
         <meta name="keywords" content="about Teja Hotel Lunawada, Teja Restaurant Lunawada, hotel restaurant Mahisagar, dining Lunawada" />
         <link rel="canonical" href="https://www.hotelteja.in/#restaurant" />
-        <meta property="og:title" content="About Teja Hotel & Restaurant Lunawada | Best Hotel & Dining in Mahisagar" />
-        <meta property="og:description" content="Learn about Teja Hotel & Restaurant in Lunawada, Mahisagar. Experience contemporary elegance, innovative cuisine, and excellent service." />
-        <meta property="og:url" content="https://www.hotelteja.in/#restaurant" />
-        <meta name="twitter:title" content="About Teja Hotel & Restaurant Lunawada | Best Hotel & Dining in Mahisagar" />
-        <meta name="twitter:description" content="Learn about Teja Hotel & Restaurant in Lunawada, Mahisagar. Experience contemporary elegance, innovative cuisine, and excellent service." />
       </Helmet>
       <section className="about-section" id="restaurant">
       <div className="container">
