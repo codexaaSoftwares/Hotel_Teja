@@ -36,13 +36,19 @@ const About = () => {
                   evenings, or a night out with friends.
                 </p>
               </div>
-              <img src="/assets/images/sign.png" alt="Signature" />
             </div>
           </div>
           <div className="col-lg-6 align-self-center">
             <div className="img">
-              <img className="bg-shape" src="/assets/images/vegetales-shapes.png" alt="Decorative shapes" />
-              <img src="/assets/images/Image.png" alt="Restaurant interior" />
+              <motion.img 
+                src="/assets/images/J_J_5849.JPG" 
+                alt="Hotel Teja Restaurant Interior" 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                style={{ width: '145%', height: 'auto', borderRadius: '10px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 10px 40px' }}
+              />
             </div>
           </div>
         </div>

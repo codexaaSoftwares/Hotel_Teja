@@ -13,24 +13,6 @@ const Footer = () => {
   return (
     <footer className="footer-section">
       <img className="shape" src="/assets/images/footer-shape.png" alt="Footer decorative shape" />
-      <motion.img 
-        className="f-left" 
-        src="/assets/images/f-left.png" 
-        alt="Footer decorative element"
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-      />
-      <motion.img 
-        className="f-right" 
-        src="/assets/images/f-right.png" 
-        alt="Footer decorative element"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-      />
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-8">

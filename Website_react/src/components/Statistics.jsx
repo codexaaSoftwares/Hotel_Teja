@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 
 const Statistics = () => {
   const cuisines = [
-    { icon: '/assets/images/stat01.png', label: 'GUJARATI' },
-    { icon: '/assets/images/stat02.png', label: 'PUNJABI' },
-    { icon: '/assets/images/stat03.png', label: 'SOUTH' },
-    { icon: '/assets/images/stat04.png', label: 'CHINESE' }
+    { icon: '/assets/images/OUR CUISINES.png', label: 'GUJARATI' },
+    { icon: '/assets/images/OUR CUISINES.png', label: 'PUNJABI' },
+    { icon: '/assets/images/OUR CUISINES.png', label: 'SOUTH' },
+    { icon: '/assets/images/OUR CUISINES.png', label: 'CHINESE' }
   ]
 
   return (
