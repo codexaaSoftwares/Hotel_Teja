@@ -5,7 +5,7 @@ const BookingPlatforms = () => {
     { 
       name: 'Zomato', 
       type: 'food',
-      url: 'https://www.zomato.com',
+      url: 'https://www.zomato.com/lunawada/teja-hotel-lunawada-locality/order',
       color: '#E23744',
       logo: 'https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png',
       logoType: 'image'
@@ -31,7 +31,7 @@ const BookingPlatforms = () => {
     { 
       name: 'Booking.com', 
       type: 'booking',
-      url: 'https://www.booking.com',
+      url: 'https://www.booking.com/hotel/in/teja-lunawada.html?aid=304142&label=gen173nr-10CAsobEINdGVqYS1sdW5hd2FkYUgzWARobIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCzYblyQbAAgHSAiRhMzE5OTJlNC05Yzk5LTRhMjQtOWFiOC02ZWM5NTMzOGM3MGTYAgHgAgE&sid=4286e817bfa83d425b0d8706e0d2ba5a&all_sr_blocks=1542568601_425618987_2_1_0&checkin=2025-12-16&checkout=2025-12-17&dest_id=-2102868&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1542568601_425618987_2_1_0&hpos=1&matching_block_id=1542568601_425618987_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1542568601_425618987_2_1_0__190000&srepoch=1765545565&srpvid=faf35dae1b820fff&type=total&ucfs=1&',
       color: '#003580',
       logo: 'https://cf.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png',
       logoType: 'image'
