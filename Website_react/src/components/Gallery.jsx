@@ -1,85 +1,50 @@
-import { useState, useEffect, useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 import { motion } from 'framer-motion'
 
 const Gallery = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const sliderRef = useRef(null)
-
-  const rooms = [
+  const galleryImages = [
     {
-      image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop',
-      title: 'Deluxe Room',
-      price: '₹2,500',
-      alt: 'Deluxe Room'
+      image: '/assets/images/J_J_5854.JPG',
+      alt: 'Hotel Gallery Image 1'
     },
     {
-      image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop',
-      title: 'Suite Room',
-      price: '₹4,500',
-      alt: 'Suite Room'
+      image: '/assets/images/J_J_5857.JPG',
+      alt: 'Hotel Gallery Image 2'
     },
     {
-      image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop',
-      title: 'Family Room',
-      price: '₹3,500',
-      alt: 'Family Room'
+      image: '/assets/images/J_J_5868.JPG',
+      alt: 'Hotel Gallery Image 3'
     },
     {
-      image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=600&fit=crop',
-      title: 'Executive Room',
-      price: '₹3,200',
-      alt: 'Executive Room'
+      image: '/assets/images/J_J_5874.JPG',
+      alt: 'Hotel Gallery Image 4'
     },
     {
-      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
-      title: 'Presidential Suite',
-      price: '₹8,500',
-      alt: 'Presidential Suite'
+      image: '/assets/images/J_J_5853.JPG',
+      alt: 'Hotel Gallery Image 5'
     },
     {
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
-      title: 'Standard Room',
-      price: '₹1,800',
-      alt: 'Standard Room'
+      image: '/assets/images/J_J_5877.JPG',
+      alt: 'Hotel Gallery Image 6'
+    },
+    {
+      image: '/assets/images/J_J_5848.JPG',
+      alt: 'Hotel Gallery Image 7'
+    },
+    {
+      image: '/assets/images/J_J_5842.JPG',
+      alt: 'Hotel Gallery Image 8'
     }
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % rooms.length)
-    }, 4000)
-    return () => clearInterval(interval)
-  }, [rooms.length])
-
-  const goToSlide = (index) => {
-    setCurrentIndex(index)
-  }
-
-  const getCardStyle = (index) => {
-    const offset = index - currentIndex
-    const absOffset = Math.abs(offset)
-
-    let translateX = offset * 320
-    let translateZ = -absOffset * 50
-    let scale = 1 - absOffset * 0.15
-    let opacity = 1 - absOffset * 0.3
-    let rotateY = offset * 15
-
-    if (absOffset > 2) {
-      opacity = 0.1
-      scale = 0.7
-    }
-
-    return {
-      transform: `translateX(${translateX}px) translateZ(${translateZ}px) scale(${scale}) rotateY(${rotateY}deg)`,
-      opacity: Math.max(opacity, 0.1),
-      zIndex: rooms.length - absOffset,
-    }
-  }
-
   return (
     <section className="gallery-section" id="gallery">
-      <div className="rooms-banner-slider">
+      <div className="gallery-carousel-wrapper">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">
@@ -108,49 +73,42 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="rooms-slider-wrapper" ref={sliderRef}>
-          <div className="rooms-slider-3d">
-            {rooms.map((room, index) => (
-              <div
-                key={index}
-                className={`room-slide-card ${index === currentIndex ? 'active' : ''}`}
-                style={getCardStyle(index)}
-                onClick={() => goToSlide(index)}
-              >
-                <div className="room-slide-image">
-                  <img src={room.image} alt={room.alt} />
+        <div className="gallery-swiper-container">
+          <Swiper
+            modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView="auto"
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            speed={1000}
+            loop={true}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            navigation={true}
+            className="gallery-swiper"
+          >
+            {galleryImages.map((item, index) => (
+              <SwiperSlide key={index} className="gallery-slide">
+                <div className="gallery-image-wrapper">
+                  <img src={item.image} alt={item.alt} />
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
-        </div>
-
-        <div className="rooms-slider-dots">
-          {rooms.map((_, index) => (
-            <button
-              key={index}
-              className={`slider-dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        <div className="rooms-slider-nav">
-          <button 
-            className="slider-nav-btn prev"
-            onClick={() => goToSlide((currentIndex - 1 + rooms.length) % rooms.length)}
-            aria-label="Previous slide"
-          >
-            <i className="fas fa-chevron-left"></i>
-          </button>
-          <button 
-            className="slider-nav-btn next"
-            onClick={() => goToSlide((currentIndex + 1) % rooms.length)}
-            aria-label="Next slide"
-          >
-            <i className="fas fa-chevron-right"></i>
-          </button>
+          </Swiper>
         </div>
       </div>
     </section>
@@ -158,4 +116,3 @@ const Gallery = () => {
 }
 
 export default Gallery
-
