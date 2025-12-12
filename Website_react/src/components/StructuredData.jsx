@@ -5,7 +5,7 @@
  */
 
 const StructuredData = () => {
-  const baseUrl = 'https://YOUR_DOMAIN_HERE'
+  const baseUrl = 'https://www.hotelteja.in'
   
   // Hotel Schema
   const hotelSchema = {
@@ -32,7 +32,7 @@ const StructuredData = () => {
       "latitude": "23.1284",
       "longitude": "73.6107"
     },
-    "telephone": "+91-XXXXXXXXXX", // Replace with actual phone number
+    "telephone": "+91-9104009138",
     "priceRange": "₹₹",
     "amenityFeature": [
       {
@@ -92,7 +92,7 @@ const StructuredData = () => {
       "latitude": "23.1284",
       "longitude": "73.6107"
     },
-    "telephone": "+91-XXXXXXXXXX", // Replace with actual phone number
+    "telephone": "+91-9104009138",
     "priceRange": "₹₹",
     "servesCuisine": [
       "Gujarati",
@@ -142,7 +142,7 @@ const StructuredData = () => {
       "latitude": "23.1284",
       "longitude": "73.6107"
     },
-    "telephone": "+91-XXXXXXXXXX", // Replace with actual phone number
+    "telephone": "+91-9104009138",
     "priceRange": "₹₹",
     "openingHoursSpecification": [
       {

@@ -1,5 +1,5 @@
 # robots.txt for Teja Hotel & Restaurant
-# https://YOUR_DOMAIN_HERE/robots.txt
+# https://www.hotelteja.in/robots.txt
 
 User-agent: *
 Allow: /
@@ -19,7 +19,7 @@ Allow: /#events
 Allow: /#about
 
 # Sitemap location
-Sitemap: https://YOUR_DOMAIN_HERE/sitemap.xml
+Sitemap: https://www.hotelteja.in/sitemap.xml
 
 # Crawl-delay (optional, adjust as needed)
 Crawl-delay: 1

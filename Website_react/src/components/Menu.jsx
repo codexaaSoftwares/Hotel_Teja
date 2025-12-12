@@ -40,10 +40,10 @@ const Menu = () => {
         <title>Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant</title>
         <meta name="description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine. Book a table today." />
         <meta name="keywords" content="restaurant menu Lunawada, Gujarati food Lunawada, Punjabi food Lunawada, Chinese food Lunawada, South Indian food Lunawada, Teja Restaurant menu" />
-        <link rel="canonical" href="https://YOUR_DOMAIN_HERE/#menu" />
+        <link rel="canonical" href="https://www.hotelteja.in/#menu" />
         <meta property="og:title" content="Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant" />
         <meta property="og:description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine." />
-        <meta property="og:url" content="https://YOUR_DOMAIN_HERE/#menu" />
+        <meta property="og:url" content="https://www.hotelteja.in/#menu" />
         <meta name="twitter:title" content="Restaurant Menu Lunawada | Gujarati, Punjabi, Chinese & South Indian Food - Teja Restaurant" />
         <meta name="twitter:description" content="Explore our restaurant menu in Lunawada, Mahisagar. Teja Restaurant offers authentic Gujarati, Punjabi, Chinese, and South Indian cuisine." />
       </Helmet>
