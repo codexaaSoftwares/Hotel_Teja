@@ -9,36 +9,72 @@ import { motion } from 'framer-motion'
 const Gallery = () => {
   const galleryImages = [
     {
-      image: '/assets/images/J_J_5854.JPG',
-      alt: 'Teja Hotel & Restaurant gallery - Interior view in Lunawada, Mahisagar'
+      image: '/assets/images/gallary/Front Images.webp',
+      alt: 'Teja Hotel & Restaurant front view in Lunawada, Mahisagar - Best hotel near Godhra-Lunawada highway'
     },
     {
-      image: '/assets/images/J_J_5857.JPG',
-      alt: 'Teja Hotel gallery - Dining area and ambiance in Lunawada'
+      image: '/assets/images/gallary/hotel teja 1.jpg',
+      alt: 'Teja Hotel exterior view in Lunawada, Mahisagar - Comfortable hotel rooms and restaurant'
     },
     {
-      image: '/assets/images/J_J_5868.JPG',
-      alt: 'Teja Restaurant gallery - Modern dining space in Lunawada, Gujarat'
+      image: '/assets/images/gallary/hotel teja 2.jpg',
+      alt: 'Teja Hotel building in Lunawada, Gujarat - Best hotel accommodation in Mahisagar district'
     },
     {
-      image: '/assets/images/J_J_5874.JPG',
-      alt: 'Teja Hotel gallery - Hotel facilities and rooms in Lunawada'
+      image: '/assets/images/gallary/hotel teja 3.jpg',
+      alt: 'Teja Hotel & Restaurant in Lunawada - Hotel rooms and dining facilities in Mahisagar'
     },
     {
-      image: '/assets/images/J_J_5853.JPG',
-      alt: 'Teja Restaurant gallery - Food presentation and dining experience in Lunawada'
+      image: '/assets/images/gallary/hotel_view_1.jpg',
+      alt: 'Teja Hotel view in Lunawada, Mahisagar - Hotel rooms and restaurant near Godhra-Lunawada highway'
     },
     {
-      image: '/assets/images/J_J_5877.JPG',
-      alt: 'Teja Hotel gallery - Accommodation and amenities in Lunawada, Mahisagar'
+      image: '/assets/images/gallary/J_J_5842.JPG',
+      alt: 'Teja Hotel & Restaurant interior in Lunawada, Mahisagar - Modern hotel facilities and dining area'
     },
     {
-      image: '/assets/images/J_J_5848.JPG',
-      alt: 'Teja Hotel & Restaurant gallery - Event space and banquet hall in Lunawada'
+      image: '/assets/images/gallary/J_J_5845.JPG',
+      alt: 'Teja Restaurant dining area in Lunawada, Gujarat - Best Punjabi food and Gujarati cuisine in Mahisagar'
     },
     {
-      image: '/assets/images/J_J_5842.JPG',
-      alt: 'Teja Hotel gallery - Hotel exterior and facilities in Lunawada, Gujarat'
+      image: '/assets/images/gallary/J_J_5848.JPG',
+      alt: 'Teja Hotel banquet hall in Lunawada, Mahisagar - Event hall and birthday party venue'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5849.JPG',
+      alt: 'Teja Restaurant interior in Lunawada - Authentic Punjabi food and Gujarati cuisine in Mahisagar'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5853.JPG',
+      alt: 'Teja Hotel & Restaurant gallery in Lunawada, Mahisagar - Hotel rooms and restaurant dining space'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5854.JPG',
+      alt: 'Teja Hotel accommodation in Lunawada, Gujarat - Comfortable rooms and modern amenities in Mahisagar'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5857.JPG',
+      alt: 'Teja Restaurant dining experience in Lunawada, Mahisagar - Best restaurant for Punjabi and Gujarati food'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5868.JPG',
+      alt: 'Teja Hotel facilities in Lunawada, Gujarat - Hotel rooms with AC and modern amenities in Mahisagar'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5874.JPG',
+      alt: 'Teja Hotel & Restaurant in Lunawada, Mahisagar - Family hotel rooms and restaurant near Godhra-Lunawada highway'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5877.JPG',
+      alt: 'Teja Hotel rooms in Lunawada, Gujarat - Deluxe rooms and family accommodation in Mahisagar'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5885.JPG',
+      alt: 'Teja Restaurant ambiance in Lunawada, Mahisagar - Best restaurant for authentic Punjabi and Gujarati food'
+    },
+    {
+      image: '/assets/images/gallary/J_J_5907.JPG',
+      alt: 'Teja Hotel & Restaurant in Lunawada, Gujarat - Hotel accommodation and dining facilities in Mahisagar'
     }
   ]
 
@@ -66,7 +102,7 @@ const Gallery = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                   >
-                    Experience Luxury, Comfort & Culinary Delights
+                    See Our Hotel & Restaurant Photos
                   </motion.h2>
                 </div>
               </div>
