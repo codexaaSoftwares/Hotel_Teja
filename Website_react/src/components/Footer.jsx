@@ -95,6 +95,31 @@ const Footer = () => {
             <div className="copyright-text">
               &copy; 2025 Teja. All content, menu items, and text are the property of Teja. All Rights Reserved.
             </div>
+            <div className="developer-credit" style={{ 
+              textAlign: 'center', 
+              marginTop: '15px', 
+              fontSize: '14px', 
+              color: 'rgba(255, 255, 255, 0.8)',
+              paddingTop: '15px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.2)'
+            }}>
+              Developed by{' '}
+              <a 
+                href="https://www.codexaatech.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ 
+                  color: '#fff', 
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  transition: 'opacity 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.target.style.opacity = '1'}
+              >
+                Codexaa Software Solutions
+              </a>
+            </div>
           </div>
         </div>
       </div>
