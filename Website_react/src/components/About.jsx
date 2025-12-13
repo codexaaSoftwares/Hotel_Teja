@@ -6,7 +6,7 @@ const About = () => {
     <>
       <Helmet>
         {/* Meta tags only - title is set by main page Banner component */}
-        <meta name="description" content="Learn about Teja Hotel & Restaurant in Lunawada, Mahisagar. Experience contemporary elegance, innovative cuisine, and excellent service. Ideal for business meetings, romantic evenings, and family dining." />
+        <meta name="description" content="Teja Hotel & Restaurant - Best restaurant in Lunawada and Mahisagar serving authentic Punjabi food, Gujarati cuisine, Chinese dishes, and South Indian food. Located near Godhra-Lunawada highway. Perfect for family dining and celebrations." />
         <meta name="keywords" content="about Teja Hotel Lunawada, Teja Restaurant Lunawada, hotel restaurant Mahisagar, dining Lunawada" />
         <link rel="canonical" href="https://www.hotelteja.in/#restaurant" />
       </Helmet>
@@ -37,11 +37,10 @@ const About = () => {
                   Delight You     
                 </motion.h2>
                 <p>
-                  Discover a culinary haven at Teja, where a diverse menu awaits. Savor the flavors of North Indian, Chinese, Gujarati, South Indian, Pizza, Sandwiches, and more. Indulge in a delightful array of beverages. Experience a gastronomic journey like no other.
+                  Welcome to Teja Hotel & Restaurant, the best restaurant in Lunawada and Mahisagar. We serve fresh, tasty food every day. Our menu includes spicy Punjabi dishes, traditional Gujarati food, Chinese food, South Indian meals, and delicious snacks.
                 </p>
                 <p>
-                  Teja blends contemporary elegance and comfort with innovative cuisine and excellent service. The original menu and unique decor make Teja an ideal setting for business meetings, romantic 
-                  evenings, or a night out with friends.
+                  Teja Restaurant is located near the Godhra-Lunawada highway, making it easy to find. We use fresh ingredients and traditional recipes to make every meal special. Come visit us in Lunawada, Mahisagar, and taste the best Punjabi food and Gujarati cuisine in the area.
                 </p>
               </div>
             </div>
@@ -49,13 +48,12 @@ const About = () => {
           <div className="col-lg-6 align-self-center">
             <div className="img">
               <motion.img 
-                src="/assets/images/J_J_5849.JPG" 
-                alt="Teja Hotel & Restaurant interior in Lunawada, Mahisagar - Modern dining space" 
+                src="/assets/images/image_thali.png" 
+                alt="Teja Hotel & Restaurant traditional Indian thali meal in Lunawada, Mahisagar - Authentic cuisine" 
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                style={{ width: '145%', height: 'auto', borderRadius: '10px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 10px 40px' }}
               />
             </div>
           </div>

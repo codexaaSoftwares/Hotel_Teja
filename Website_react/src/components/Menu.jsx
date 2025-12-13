@@ -7,7 +7,7 @@ const Menu = () => {
   const [activeTab, setActiveTab] = useState('starters')
 
   const MenuItem = ({ item }) => (
-    <tr>
+    <tr className="menu-item-row">
       <td>
         <div className="col-one">
           <h4 className="title">{item.title}</h4>
@@ -41,6 +41,23 @@ const Menu = () => {
         <meta name="description" content="Best Punjabi food in Lunawada and Mahisagar. Teja Restaurant offers authentic Punjabi food, Gujarati cuisine, Chinese dishes, and South Indian food. Explore our menu and book a table today." />
         <meta name="keywords" content="Punjabi food Lunawada, Punjabi food Mahisagar, best Punjabi food Lunawada, restaurant menu Lunawada, Gujarati food Lunawada, Chinese food Lunawada, South Indian food Lunawada, Teja Restaurant menu, Punjabi thali Lunawada" />
         <link rel="canonical" href="https://www.hotelteja.in/#menu" />
+        <style>{`
+          .menu-item-row {
+            transition: all 0.3s ease;
+            cursor: pointer;
+          }
+          .menu-item-row:hover {
+            background-color: rgba(220, 53, 69, 0.05);
+            transform: translateX(5px);
+          }
+          .menu-item-row:hover .title {
+            color: #dc3545;
+          }
+          .menu-item-row:hover .price {
+            color: #dc3545;
+            font-weight: 600;
+          }
+        `}</style>
       </Helmet>
       <section className="menu-section" id="menu">
         <img className="shape1" src="/assets/images/menu-left.png" alt="Decorative shape for Teja Restaurant menu section" />

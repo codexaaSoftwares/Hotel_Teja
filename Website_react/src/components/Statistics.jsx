@@ -10,6 +10,23 @@ const Statistics = () => {
 
   return (
     <section className="statistics-section" id="cuisines">
+      <style>{`
+        .statistics-section .stat-item {
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+        .statistics-section .stat-item:hover {
+          transform: translateY(-10px);
+        }
+        .statistics-section .stat-item:hover .icon img {
+          transform: scale(1.1);
+          transition: transform 0.3s ease;
+        }
+        .statistics-section .stat-item:hover .info {
+          color: #dc3545;
+          font-weight: 600;
+        }
+      `}</style>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8">
@@ -31,7 +48,7 @@ const Statistics = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                  A Culinary Journey Across Lunawada
+                  Our Delicious Food Menu
                 </motion.h2>
                 <motion.p 
                   className="text"
@@ -40,7 +57,7 @@ const Statistics = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Experience the rich and diverse flavors of India with our authentic cuisine selection. From the sweet and savory delights of Gujarat to the robust flavors of Punjab, the aromatic spices of Chinese cuisine, and the traditional taste of South India - we bring you the best of every region.
+                  At Teja Restaurant in Lunawada, Mahisagar, we serve four types of tasty food. Enjoy traditional Gujarati food with sweet and spicy flavors. Try our spicy Punjabi dishes that are full of flavor. Taste our Chinese food with fresh vegetables and sauces. Or choose from our South Indian meals with rice and curry. All our food is made fresh daily with the best ingredients.
                 </motion.p>
               </div>
             </div>
