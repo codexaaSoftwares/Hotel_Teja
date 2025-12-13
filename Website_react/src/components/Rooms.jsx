@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 const Rooms = () => {
   const detailedRooms = [
     {
-      image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop',
+      image: '/assets/images/room/teja hotel - delux room.JPG',
       title: 'Deluxe Room',
       description: 'Big and comfortable room with AC, free WiFi, TV, and all modern facilities. Perfect for couples or business travelers in Lunawada.',
       size: '350 sq ft',
@@ -15,7 +15,7 @@ const Rooms = () => {
       alt: 'Deluxe Room at Teja Hotel Lunawada - Spacious accommodation with modern amenities'
     },
     {
-      image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop',
+      image: '/assets/images/room/teja hotel - family room.JPG',
       title: 'Family Room',
       description: 'Large room perfect for families with children. Has two beds, extra space, and all amenities. Best family hotel room in Lunawada, Mahisagar.',
       size: '450 sq ft',
@@ -26,7 +26,7 @@ const Rooms = () => {
       alt: 'Family Room at Teja Hotel Lunawada - Large family-friendly accommodation in Mahisagar'
     },
     {
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
+      image: '/assets/images/room/teja hotel - standard room.JPG',
       title: 'Standard Room',
       description: 'Clean and comfortable AC room with all basic facilities. Great value for money. Perfect for short stays in Lunawada, Mahisagar.',
       size: '280 sq ft',
