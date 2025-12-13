@@ -5,6 +5,7 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { motion } from 'framer-motion'
+import { Helmet } from 'react-helmet-async'
 
 const Gallery = () => {
   const galleryImages = [
@@ -79,8 +80,14 @@ const Gallery = () => {
   ]
 
   return (
-    <section className="gallery-section" id="gallery">
-      <div className="gallery-carousel-wrapper">
+    <>
+      <Helmet>
+        <meta name="description" content="View photos of Teja Hotel & Restaurant in Lunawada, Mahisagar. See our hotel rooms, restaurant dining area, banquet hall, and event spaces. Best hotel near Godhra-Lunawada highway." />
+        <meta name="keywords" content="Teja Hotel photos Lunawada, hotel gallery Lunawada, restaurant photos Lunawada, hotel rooms photos Mahisagar, event hall photos Lunawada, Teja Restaurant gallery" />
+        <link rel="canonical" href="https://www.hotelteja.in/#gallery" />
+      </Helmet>
+      <section className="gallery-section" id="gallery">
+        <div className="gallery-carousel-wrapper">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">
@@ -104,6 +111,22 @@ const Gallery = () => {
                   >
                     See Our Hotel & Restaurant Photos
                   </motion.h2>
+                  <motion.p 
+                    className="text"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    style={{ 
+                      textAlign: 'center', 
+                      marginTop: '20px',
+                      maxWidth: '700px',
+                      marginLeft: 'auto',
+                      marginRight: 'auto'
+                    }}
+                  >
+                    Take a look at our photos. See our hotel rooms, restaurant dining area, banquet hall, and event spaces in Lunawada, Mahisagar. These pictures show our clean rooms, tasty food, and beautiful event hall. Perfect for your stay or celebration in Lunawada, Gujarat.
+                  </motion.p>
                 </div>
               </div>
             </div>
@@ -148,6 +171,7 @@ const Gallery = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

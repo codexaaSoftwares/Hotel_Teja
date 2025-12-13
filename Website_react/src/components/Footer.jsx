@@ -67,7 +67,7 @@ const Footer = () => {
                   </p>
                   <p style={{ marginTop: '10px' }}>
                     <a 
-                      href="https://www.google.com/maps?q=23.1284,73.6107" 
+                      href="https://maps.app.goo.gl/AFbyHoQSjpiLwe7S6" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       style={{ color: '#fff', textDecoration: 'underline' }}
