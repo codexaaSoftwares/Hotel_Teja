@@ -47,13 +47,7 @@ const Events = () => {
               </motion.p>
             </div>
             
-            <div className="event-features" style={{ 
-              marginBottom: '40px', 
-              padding: '40px', 
-              background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
-              borderRadius: '15px',
-              boxShadow: '0 10px 40px rgba(0,0,0,0.1)'
-            }}>
+            <div className="event-features">
               <motion.h4 
                 style={{ 
                   marginBottom: '30px', 
@@ -81,63 +75,21 @@ const Events = () => {
                 ].map((feature, index) => (
                   <motion.div 
                     key={index}
-                    className="col-lg-6 col-md-6 col-sm-6"
-                    style={{ marginBottom: '25px' }}
+                    className="col-lg-6 col-md-6 col-sm-12"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
                   >
-                    <div 
-                      style={{ 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        gap: '15px',
-                        padding: '20px',
-                        background: '#fff',
-                        borderRadius: '12px',
-                        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
-                        transition: 'all 0.3s ease',
-                        cursor: 'pointer'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateY(-5px)'
-                        e.currentTarget.style.boxShadow = '0 8px 25px rgba(220, 53, 69, 0.2)'
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'translateY(0)'
-                        e.currentTarget.style.boxShadow = '0 5px 15px rgba(0,0,0,0.08)'
-                      }}
-                    >
-                      <div style={{
-                        width: '60px',
-                        height: '60px',
-                        borderRadius: '12px',
-                        background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '30px',
-                        boxShadow: '0 4px 15px rgba(220, 53, 69, 0.3)'
-                      }}>
+                    <div className="event-feature-card">
+                      <div className="event-feature-icon">
                         {feature.icon}
                       </div>
-                      <div style={{ flex: 1 }}>
-                        <h5 style={{ 
-                          margin: 0, 
-                          fontSize: '18px', 
-                          fontWeight: '700', 
-                          marginBottom: '6px',
-                          color: '#333'
-                        }}>
+                      <div className="event-feature-content">
+                        <h5 className="event-feature-title">
                           {feature.title}
                         </h5>
-                        <p style={{ 
-                          margin: 0, 
-                          fontSize: '14px', 
-                          color: '#666',
-                          lineHeight: '1.5'
-                        }}>
+                        <p className="event-feature-desc">
                           {feature.desc}
                         </p>
                       </div>
@@ -147,26 +99,10 @@ const Events = () => {
               </div>
             </div>
             
-            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+            <div className="event-booking-cta">
               <motion.a
                 href="tel:+919104009138"
-                className="custom-button"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '10px 24px',
-                  background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)',
-                  color: '#fff',
-                  textDecoration: 'none',
-                  borderRadius: '50px',
-                  fontWeight: '600',
-                  fontSize: '14px',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 4px 15px rgba(220, 53, 69, 0.3)',
-                  border: 'none',
-                  cursor: 'pointer'
-                }}
+                className="event-book-button"
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: '0 6px 20px rgba(220, 53, 69, 0.4)'
@@ -177,9 +113,9 @@ const Events = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <i className="fas fa-phone-alt" style={{ fontSize: '14px' }}></i>
+                <i className="fas fa-phone-alt"></i>
                 <span>Call to Book Now</span>
-                <span style={{ fontSize: '12px', opacity: 0.9, marginLeft: '4px' }}>+91 9104009138</span>
+                <span className="phone-number">+91 9104009138</span>
               </motion.a>
             </div>
           </div>

@@ -13,7 +13,7 @@ const About = () => {
       <section className="about-section" id="restaurant">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-md-12">
             <div className="content">
               <div className="section-header">
                 <motion.h6 
@@ -45,7 +45,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 align-self-center">
+          <div className="col-lg-6 col-md-12 align-self-center">
             <div className="img">
               <motion.img 
                 src="/assets/images/image_thali.png" 

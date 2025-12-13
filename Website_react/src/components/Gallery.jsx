@@ -159,6 +159,41 @@ const Gallery = () => {
             }}
             navigation={true}
             className="gallery-swiper"
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 50,
+                  modifier: 1,
+                  slideShadows: false,
+                },
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                coverflowEffect: {
+                  rotate: 30,
+                  stretch: 0,
+                  depth: 75,
+                  modifier: 1,
+                  slideShadows: true,
+                },
+              },
+              1024: {
+                slidesPerView: "auto",
+                spaceBetween: 40,
+                coverflowEffect: {
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                },
+              },
+            }}
           >
             {galleryImages.map((item, index) => (
               <SwiperSlide key={index} className="gallery-slide">

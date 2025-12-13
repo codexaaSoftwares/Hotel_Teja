@@ -89,7 +89,7 @@ const Rooms = () => {
           {detailedRooms.map((room, index) => (
             <motion.div 
               key={index} 
-              className={index === 0 ? "col-lg-12" : "col-lg-6 col-md-6"}
+              className={index === 0 ? "col-lg-12 col-md-12 col-sm-12" : "col-lg-6 col-md-6 col-sm-12"}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

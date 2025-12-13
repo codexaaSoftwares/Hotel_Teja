@@ -68,7 +68,7 @@ const Statistics = () => {
             {cuisines.map((cuisine, index) => (
               <motion.div 
                 key={index} 
-                className="col-lg-3 col-sm-6"
+                className="col-lg-3 col-md-6 col-sm-6 col-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

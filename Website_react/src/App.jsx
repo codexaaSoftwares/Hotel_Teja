@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Preloader from './components/Preloader'
 import ScrollToTop from './components/ScrollToTop'
 import Header from './components/Header'
@@ -16,26 +16,34 @@ import Footer from './components/Footer'
 import StructuredData from './components/StructuredData'
 
 function App() {
+  const [isOverlayActive, setIsOverlayActive] = useState(false)
+
   useEffect(() => {
     // Initialize any React-specific functionality here
     // All third-party JS libraries have been replaced with React alternatives
   }, [])
 
+  // Sync overlay with menu state via event
+  useEffect(() => {
+    const handleMenuToggle = (e) => {
+      setIsOverlayActive(e.detail.isOpen)
+    }
+
+    window.addEventListener('menuToggle', handleMenuToggle)
+    return () => window.removeEventListener('menuToggle', handleMenuToggle)
+  }, [])
+
   const handleOverlayClick = () => {
-    // Close menu when overlay is clicked
-    const menu = document.querySelector('.menu')
-    const headerBar = document.querySelector('.header-bar')
-    if (menu) menu.classList.remove('active')
-    if (headerBar) headerBar.classList.remove('active')
-    const overlay = document.querySelector('.overlay')
-    if (overlay) overlay.classList.remove('active')
+    setIsOverlayActive(false)
+    // Dispatch event to close menu
+    window.dispatchEvent(new CustomEvent('closeMenu'))
   }
 
   return (
     <div className="App">
       <StructuredData />
       <Preloader />
-      <div className="overlay" onClick={handleOverlayClick}></div>
+      <div className={`overlay ${isOverlayActive ? 'active' : ''}`} onClick={handleOverlayClick}></div>
       <ScrollToTop />
       <Header />
       {/* Fixed Instagram Logo on Side - Same as Footer */}

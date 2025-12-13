@@ -107,6 +107,20 @@ const Banner = () => {
           }}
           navigation={false}
           className="banner-swiper"
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            1024: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+          }}
           onSwiper={(swiper) => {
             // Force autoplay to start when swiper is ready
             setTimeout(() => {
