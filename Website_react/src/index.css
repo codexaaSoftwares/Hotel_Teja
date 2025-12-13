@@ -1928,7 +1928,7 @@ html {
 
   /* About Section Mobile */
   .about-section .row {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .about-section .col-lg-6,
@@ -1994,10 +1994,25 @@ html {
 
   .room-box-fullwidth,
   .room-box-hero-grid {
-    margin-bottom: 25px;
+    margin-bottom: 30px !important;
     height: auto !important;
     overflow: hidden;
     border-radius: 12px;
+  }
+
+  /* Add spacing to column containers on mobile for proper gaps between room cards */
+  .rooms-section .row > [class*="col-"] {
+    margin-bottom: 30px;
+  }
+  
+  .rooms-section .row > [class*="col-"]:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Remove margin from room-box since column already has spacing */
+  .rooms-section .row > [class*="col-"] .room-box-fullwidth,
+  .rooms-section .row > [class*="col-"] .room-box-hero-grid {
+    margin-bottom: 0 !important;
   }
 
   .room-box {
@@ -2211,7 +2226,6 @@ html {
   }
 
   /* Rooms Mobile Small */
-
   .room-box-fullwidth .room-image {
     height: auto !important;
     min-height: auto !important;
@@ -2270,11 +2284,19 @@ html {
     padding: 6px 12px !important;
   }
 
-  /* Remove extra spacing in room boxes */
-  .room-box-fullwidth,
-  .room-box-hero-grid {
-    margin: 0;
-    padding: 0;
+  /* Add proper spacing between room boxes on mobile - handled by column spacing */
+  .rooms-section .row > [class*="col-"] {
+    margin-bottom: 30px;
+  }
+  
+  .rooms-section .row > [class*="col-"]:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Remove margin from room-box since column already has spacing */
+  .rooms-section .row > [class*="col-"] .room-box-fullwidth,
+  .rooms-section .row > [class*="col-"] .room-box-hero-grid {
+    margin-bottom: 0 !important;
   }
 
   .room-box-fullwidth .room-image,
