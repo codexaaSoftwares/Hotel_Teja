@@ -6,7 +6,7 @@ const Rooms = () => {
     {
       image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop',
       title: 'Deluxe Room',
-      description: 'Spacious and elegantly designed room with modern amenities.',
+      description: 'Big and comfortable room with AC, free WiFi, TV, and all modern facilities. Perfect for couples or business travelers in Lunawada.',
       size: '350 sq ft',
       capacity: '2 Guests',
       bed: 'King Size Bed',
@@ -17,7 +17,7 @@ const Rooms = () => {
     {
       image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop',
       title: 'Family Room',
-      description: 'Large family-friendly room with extra space and amenities.',
+      description: 'Large room perfect for families with children. Has two beds, extra space, and all amenities. Best family hotel room in Lunawada, Mahisagar.',
       size: '450 sq ft',
       capacity: '4-5 Guests',
       bed: '2 Queen Beds',
@@ -28,7 +28,7 @@ const Rooms = () => {
     {
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
       title: 'Standard Room',
-      description: 'Comfortable and well-appointed room with all essential amenities.',
+      description: 'Clean and comfortable AC room with all basic facilities. Great value for money. Perfect for short stays in Lunawada, Mahisagar.',
       size: '280 sq ft',
       capacity: '2 Guests',
       bed: 'Queen Size Bed',
@@ -42,7 +42,7 @@ const Rooms = () => {
     <>
       <Helmet>
         {/* Meta tags only - title is set by main page Banner component */}
-        <meta name="description" content="Book comfortable hotel rooms in Lunawada, Mahisagar. Teja Hotel offers Deluxe Rooms, Family Rooms, and Standard AC Rooms with modern amenities. Best hotel near Godhra-Lunawada highway." />
+        <meta name="description" content="Book comfortable hotel rooms in Lunawada, Mahisagar. Teja Hotel offers Deluxe Rooms, Family Rooms, and Standard AC Rooms with AC, free WiFi, TV, and room service. Best hotel near Godhra-Lunawada highway for travelers and families." />
         <meta name="keywords" content="hotel rooms Lunawada, deluxe rooms Lunawada, family rooms Lunawada, AC rooms Lunawada, hotel accommodation Lunawada, Teja Hotel rooms" />
         <link rel="canonical" href="https://www.hotelteja.in/#rooms" />
       </Helmet>
@@ -79,8 +79,7 @@ const Rooms = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                   >
-                    Experience comfort and luxury in our thoughtfully designed rooms. Each room is equipped with modern amenities 
-                    to ensure a memorable stay. From cozy standard rooms to luxurious suites, we have the perfect accommodation for every guest.
+                    Welcome to Teja Hotel in Lunawada, Mahisagar. We offer comfortable and clean hotel rooms for your stay. All our rooms have AC, free WiFi, TV, and room service. Choose from our Deluxe Rooms, Family Rooms, or Standard AC Rooms. We are the best hotel near the Godhra-Lunawada highway, perfect for travelers and families visiting Lunawada and Mahisagar.
                   </motion.p>
                 </div>
               </div>
