@@ -1621,6 +1621,11 @@ html {
   padding: 130px 0px 5px !important;
 }
 
+/* About Section - Paragraph Text Justify */
+.about-section .section-header p {
+  text-align: justify;
+}
+
 /* Gallery Section - Swiper Carousel with 3D Effect */
 .gallery-section {
   padding: 100px 0;
@@ -1954,6 +1959,11 @@ html {
 
   .about-section .section-header {
     text-align: center;
+  }
+  
+  /* Keep paragraph text justified on mobile for About section only */
+  .about-section .section-header p {
+    text-align: justify;
   }
 
   /* Statistics Section Mobile */
