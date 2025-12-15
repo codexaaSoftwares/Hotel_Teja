@@ -18,6 +18,12 @@
   justify-content: center;
   align-items: center;
   padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+/* Compact header when scrolled */
+.header-section.header-active .header-wrapper {
+  padding: 8px 0;
 }
 
 .header-wrapper .logo.logo-centered {
@@ -33,6 +39,11 @@
   gap: 15px;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+/* Compact logo link when scrolled */
+.header-section.header-active .header-wrapper .logo.logo-centered a {
+  gap: 10px;
 }
 
 .header-wrapper .logo.logo-centered a:hover {
@@ -51,6 +62,14 @@
   transition: all 0.3s ease;
 }
 
+/* Compact logo image when scrolled */
+.header-section.header-active .header-wrapper .logo.logo-centered a img {
+  max-width: 60px;
+  max-height: 50px;
+  padding: 6px;
+  border-radius: 8px;
+}
+
 .header-wrapper .logo.logo-centered a:hover img {
   box-shadow: 0 6px 25px rgba(220, 53, 69, 0.4);
 }
@@ -65,6 +84,12 @@
   white-space: nowrap;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
+}
+
+/* Compact logo text when scrolled */
+.header-section.header-active .header-wrapper .logo.logo-centered .logo-text {
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
 .header-wrapper .logo.logo-centered a:hover .logo-text {
@@ -84,8 +109,18 @@
     padding: 12px 0;
   }
   
+  /* Compact header on mobile when scrolled */
+  .header-section.header-active .header-wrapper {
+    padding: 6px 0;
+  }
+  
   .header-wrapper .logo.logo-centered a {
     gap: 10px;
+  }
+  
+  /* Compact logo link on mobile when scrolled */
+  .header-section.header-active .header-wrapper .logo.logo-centered a {
+    gap: 8px;
   }
   
   .header-wrapper .logo.logo-centered a img {
@@ -94,22 +129,68 @@
     padding: 8px;
   }
   
+  /* Compact logo image on mobile when scrolled */
+  .header-section.header-active .header-wrapper .logo.logo-centered a img {
+    max-width: 50px;
+    max-height: 40px;
+    padding: 5px;
+    border-radius: 6px;
+  }
+  
   .header-wrapper .logo.logo-centered .logo-text {
     font-size: 20px;
     letter-spacing: 2px;
   }
+  
+  /* Compact logo text on mobile when scrolled */
+  .header-section.header-active .header-wrapper .logo.logo-centered .logo-text {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
 }
 
 @media (max-width: 480px) {
+  .header-wrapper {
+    padding: 10px 0;
+  }
+  
+  /* Compact header on small mobile when scrolled */
+  .header-section.header-active .header-wrapper {
+    padding: 5px 0;
+  }
+  
+  .header-wrapper .logo.logo-centered a {
+    gap: 8px;
+  }
+  
+  /* Compact logo link on small mobile when scrolled */
+  .header-section.header-active .header-wrapper .logo.logo-centered a {
+    gap: 6px;
+  }
+  
   .header-wrapper .logo.logo-centered a img {
     max-width: 60px;
     max-height: 50px;
     padding: 6px;
   }
   
+  /* Compact logo image on small mobile when scrolled */
+  .header-section.header-active .header-wrapper .logo.logo-centered a img {
+    max-width: 45px;
+    max-height: 35px;
+    padding: 4px;
+    border-radius: 6px;
+  }
+  
   .header-wrapper .logo.logo-centered .logo-text {
     font-size: 18px;
     letter-spacing: 1.5px;
+  }
+  
+  /* Compact logo text on small mobile when scrolled */
+  .header-section.header-active .header-wrapper .logo.logo-centered .logo-text {
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 }
 
