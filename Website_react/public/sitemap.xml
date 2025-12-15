@@ -35,6 +35,14 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Cuisines Section -->
+  <url>
+    <loc>https://www.hotelteja.in/#cuisines</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   
   <!-- Gallery Section -->
   <url>

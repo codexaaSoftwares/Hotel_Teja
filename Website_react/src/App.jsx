@@ -1,19 +1,18 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import Preloader from './components/Preloader'
 import ScrollToTop from './components/ScrollToTop'
 import Header from './components/Header'
 import Banner from './components/Banner'
-import About from './components/About'
-import Menu from './components/Menu'
-import Statistics from './components/Statistics'
-import Services from './components/Services'
-import Rooms from './components/Rooms'
-import BookingPlatforms from './components/BookingPlatforms'
-import Events from './components/Events'
-import Amenities from './components/Amenities'
-import Gallery from './components/Gallery'
-import Footer from './components/Footer'
 import StructuredData from './components/StructuredData'
+
+// Lazy-load below-the-fold sections to reduce initial JS and improve performance
+const About = React.lazy(() => import('./components/About'))
+const Statistics = React.lazy(() => import('./components/Statistics'))
+const Rooms = React.lazy(() => import('./components/Rooms'))
+const BookingPlatforms = React.lazy(() => import('./components/BookingPlatforms'))
+const Events = React.lazy(() => import('./components/Events'))
+const Gallery = React.lazy(() => import('./components/Gallery'))
+const Footer = React.lazy(() => import('./components/Footer'))
 
 function App() {
   const [isOverlayActive, setIsOverlayActive] = useState(false)
@@ -66,16 +65,15 @@ function App() {
         <i className="fab fa-instagram" style={{ display: 'none' }}></i>
       </a>
       <Banner />
-      <About />
-      {/* <Menu /> */}
-      <Statistics />
-      {/* <Services /> */}
-      <Rooms />
-      <BookingPlatforms />
-      <Events />
-      {/* <Amenities /> */}
-      <Gallery />
-      <Footer />
+      <Suspense fallback={null}>
+        <About />
+        <Statistics />
+        <Rooms />
+        <BookingPlatforms />
+        <Events />
+        <Gallery />
+        <Footer />
+      </Suspense>
     </div>
   )
 }
