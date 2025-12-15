@@ -31,9 +31,11 @@ html {
   background: #dc3545;
   background-image: url('/assets/images/11341735.png');
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
+  background-attachment: scroll;
   position: relative;
+  min-height: 100%;
 }
 
 
@@ -265,6 +267,48 @@ html {
     font-size: 12px;
   }
 
+  /* Footer Background Image Fix for Mobile - Show Full Image at Bottom */
+  .footer-section {
+    background-size: 100% auto !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: 100% auto !important;
+    -moz-background-size: 100% auto !important;
+    -o-background-size: 100% auto !important;
+    min-height: auto;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 60px 0 30px !important;
+  }
+
+  .footer-section .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-section .top-area {
+    margin-bottom: 40px;
+  }
+
+  .footer-section .footer-social-links {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .footer-section .info-box {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-section .info-box .icon {
+    margin-bottom: 15px !important;
+  }
+
+  .footer-section .info-box p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
   /* Make Booking Platform Cards Smaller on Mobile with Proper Gap */
   .booking-platforms-section .row {
     margin-left: -10px;
@@ -282,24 +326,24 @@ html {
   }
 
   .booking-platforms-section .platform-card .platform-link {
-    padding: 20px 15px;
+    padding: 35px 25px;
   }
 
   .booking-platforms-section .platform-card .platform-logo {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
   }
 
   .booking-platforms-section .platform-card .platform-logo .logo-text {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .booking-platforms-section .platform-card .platform-name {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .booking-platforms-section .platform-card .platform-badge {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .booking-platforms-section .platform-card .platform-logo-wrapper {
@@ -307,8 +351,8 @@ html {
   }
 
   .booking-platforms-section .platform-card .platform-logo-img {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     object-fit: contain;
     position: relative;
     z-index: 1;
@@ -316,6 +360,36 @@ html {
 }
 
 @media (max-width: 480px) {
+  /* Footer Background Image Fix for Small Mobile - Show Full Image at Bottom */
+  .footer-section {
+    background-size: 100% auto !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: 100% auto !important;
+    -moz-background-size: 100% auto !important;
+    -o-background-size: 100% auto !important;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 50px 0 25px !important;
+  }
+
+  .footer-section .top-area {
+    margin-bottom: 35px;
+  }
+
+  .footer-section .footer-social-links {
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+
+  .footer-section .info-box {
+    margin-bottom: 25px;
+  }
+
+  .footer-section .info-box p {
+    font-size: 13px;
+  }
+
   /* Even Smaller Cards for Small Mobile with Gap */
   .booking-platforms-section .row {
     margin-left: -8px;
@@ -329,24 +403,24 @@ html {
   }
 
   .booking-platforms-section .platform-card .platform-link {
-    padding: 15px 10px;
+    padding: 30px 20px;
   }
 
   .booking-platforms-section .platform-card .platform-logo {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
   }
 
   .booking-platforms-section .platform-card .platform-logo .logo-text {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .booking-platforms-section .platform-card .platform-name {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .booking-platforms-section .platform-card .platform-badge {
-    font-size: 9px;
+    font-size: 13px;
   }
 
   .booking-platforms-section .platform-card .platform-logo-wrapper {
@@ -366,6 +440,7 @@ html {
   padding: 0;
   height: 100vh;
   min-height: 700px;
+  max-height: 100vh;
   width: 100%;
   max-width: 100%;
 }
@@ -399,6 +474,7 @@ html {
   max-width: 100%;
   height: 100vh;
   min-height: 700px;
+  max-height: 100vh;
   perspective: 1500px;
   perspective-origin: center center;
   overflow: hidden;
@@ -411,6 +487,8 @@ html {
   max-width: 100% !important;
   height: 100vh;
   min-height: 700px;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .banner-swiper .swiper-wrapper {
@@ -418,6 +496,8 @@ html {
   max-width: 100% !important;
   height: 100vh;
   min-height: 700px;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .banner-swiper .swiper-slide {
@@ -426,7 +506,9 @@ html {
   outline: none !important;
   height: 100vh;
   min-height: 700px;
+  max-height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .banner-swiper .swiper-slide-active .banner-slide {
@@ -442,11 +524,13 @@ html {
   outline: none !important;
   height: 100vh;
   min-height: 700px;
+  max-height: 100vh;
   display: flex !important;
   align-items: center;
   width: 100% !important;
   max-width: 100% !important;
   position: relative;
+  overflow: hidden;
 }
 
 .banner-slide-bg {
@@ -455,15 +539,18 @@ html {
   left: 0;
   width: 100% !important;
   max-width: 100% !important;
-  height: 100vh;
+  height: 100vh !important;
   min-height: 700px;
+  max-height: 100vh !important;
   z-index: 1;
   transform: scale(1);
   transition: transform 10s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
   background-size: cover !important;
-  background-position: center !important;
+  background-position: center center !important;
   background-repeat: no-repeat !important;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .banner-swiper .swiper-slide-active .banner-slide-bg {
@@ -503,6 +590,7 @@ html {
   max-width: 100% !important;
   height: 100vh;
   min-height: 700px;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,6 +598,7 @@ html {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 
 .banner-slide .main-content {
@@ -1166,6 +1255,13 @@ html {
   .banner-slide-bg {
     height: 100vh;
     min-height: 600px;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .banner-slide-bg {
+    background-size: cover !important;
+    background-position: center center !important;
   }
   
   .banner-slide .main-content .main-title {
@@ -1189,6 +1285,13 @@ html {
   .banner-slide-bg {
     height: 100vh;
     min-height: 550px;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .banner-slide-bg {
+    background-size: cover !important;
+    background-position: center center !important;
   }
   
   .banner-swiper .swiper-pagination {
@@ -1227,6 +1330,15 @@ html {
   .banner-slide-bg {
     height: 100vh;
     min-height: 500px;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .banner-slide-bg {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
   }
   
   .banner-swiper .swiper-pagination {
@@ -2121,16 +2233,16 @@ html {
   }
 
   .platform-card .platform-link {
-    padding: 25px 15px;
+    padding: 35px 25px;
   }
 
   .platform-card .platform-logo {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   .platform-card .platform-name {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   /* Header Mobile Improvements */
@@ -2153,7 +2265,16 @@ html {
   .banner-slide-bg {
     width: 100% !important;
     max-width: 100% !important;
-    overflow-x: hidden;
+    overflow: hidden !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+  
+  .banner-slide-bg {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
   }
 
   .banner-slide .container {
@@ -2191,6 +2312,18 @@ html {
 }
 
 @media (max-width: 575px) {
+  /* Footer Background Image Fix for Extra Small Mobile - Show Full Image at Bottom */
+  .footer-section {
+    background-size: 100% auto !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: 100% auto !important;
+    -moz-background-size: 100% auto !important;
+    -o-background-size: 100% auto !important;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   .event-features {
     padding: 20px 12px;
   }
@@ -2317,24 +2450,24 @@ html {
 
   /* Booking Platforms Mobile Small */
   .platform-card .platform-link {
-    padding: 20px 12px;
+    padding: 30px 20px;
   }
 
   .platform-card .platform-logo {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
   }
 
   .platform-card .platform-logo .logo-text {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .platform-card .platform-name {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .platform-card .platform-badge {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   /* Banner Mobile Small */

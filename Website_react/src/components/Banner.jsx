@@ -147,8 +147,11 @@ const Banner = () => {
                   style={{
                     backgroundImage: `url('${slide.image}')`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat',
+                    height: '100vh',
+                    maxHeight: '100vh',
+                    overflow: 'hidden'
                   }}
                 >
                   <div className="banner-overlay"></div>
