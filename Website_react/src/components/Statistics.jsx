@@ -137,6 +137,7 @@ const Statistics = () => {
                     <img 
                       src={category.image} 
                       alt={category.alt}
+                      loading="lazy"
                       style={{ display: 'none' }}
                       itemProp="image"
                     />

@@ -37,19 +37,20 @@ const About = () => {
                   Delight You     
                 </motion.h2>
                 <p>
-                  Welcome to Teja Hotel & Restaurant, the best restaurant in Lunawada and Mahisagar. We serve fresh, tasty food every day. Our menu includes spicy Punjabi dishes, traditional Gujarati food, Chinese food, South Indian meals, and delicious snacks.
+                  Welcome to Teja Hotel & Restaurant, the best restaurant in Lunawada and Mahisagar. We serve fresh, tasty food every day. Our menu includes spicy Punjabi dishes, traditional Gujarati food, Chinese food, South Indian meals, and delicious snacks. After your meal, you can relax in <a href="#rooms">our comfortable hotel rooms</a> in Lunawada.
                 </p>
                 <p>
-                  Teja Restaurant is located near the Godhra-Lunawada highway, making it easy to find. We use fresh ingredients and traditional recipes to make every meal special. Come visit us in Lunawada, Mahisagar, and taste the best Punjabi food and Gujarati cuisine in the area.
+                  Teja Restaurant is located near the Godhra-Lunawada highway, making it easy to find. We use fresh ingredients and traditional recipes to make every meal special. Come visit us in Lunawada, Mahisagar, and taste the best Punjabi food and Gujarati cuisine in the area, then explore more of <a href="#cuisines">our delicious cuisines</a> and <a href="#gallery">view our hotel photos</a>.
                 </p>
               </div>
             </div>
           </div>
           <div className="col-lg-6 col-md-12 align-self-center">
-            <div className="img">
-              <motion.img 
+              <div className="img">
+            <motion.img 
                 src="/assets/images/image_thali.png" 
                 alt="Teja Hotel & Restaurant traditional Indian thali meal in Lunawada, Mahisagar - Authentic cuisine" 
+                loading="lazy"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

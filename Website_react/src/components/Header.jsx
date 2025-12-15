@@ -27,7 +27,7 @@ const Header = () => {
         <div className="header-wrapper">
           <div className="logo logo-centered">
             <a href="#" onClick={scrollToTop}>
-              <img src="/assets/images/logo.png" alt="Teja Restaurant & Hotel Logo" />
+              <img src="/assets/images/logo.png" alt="Teja Restaurant & Hotel Logo" loading="lazy" />
               <span className="logo-text">Hotel Teja</span>
             </a>
           </div>

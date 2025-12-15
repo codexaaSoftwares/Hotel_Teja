@@ -98,7 +98,7 @@ const Rooms = () => {
               {room.title === 'Deluxe Room' ? (
                 <div className="room-box room-box-fullwidth">
                   <div className="room-image">
-                    <img src={room.image} alt={room.alt} />
+                    <img src={room.image} alt={room.alt} loading="lazy" />
                     <div className="room-hero-overlay">
                       <div className="room-hero-content">
                         <h4 className="room-hero-title">{room.title}</h4>
@@ -124,7 +124,7 @@ const Rooms = () => {
               ) : (
                 <div className="room-box room-box-hero-grid">
                   <div className="room-image room-image-hero-grid">
-                    <img src={room.image} alt={room.alt} />
+                    <img src={room.image} alt={room.alt} loading="lazy" />
                     <div className="room-hero-overlay room-hero-overlay-grid">
                       <div className="room-hero-content room-hero-content-grid">
                         <h4 className="room-hero-title room-hero-title-grid">{room.title}</h4>

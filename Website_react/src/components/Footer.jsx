@@ -12,13 +12,13 @@ const Footer = () => {
 
   return (
     <footer className="footer-section">
-      <img className="shape" src="/assets/images/footer-shape.png" alt="Teja Hotel & Restaurant footer decorative shape" />
+      <img className="shape" src="/assets/images/footer-shape.png" alt="Teja Hotel & Restaurant footer decorative shape" loading="lazy" />
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-8">
             <div className="top-area">
               <div className="logo">
-                <img src="/assets/images/logo.png" alt="Teja Hotel & Restaurant Lunawada Logo" />
+                <img src="/assets/images/logo.png" alt="Teja Hotel & Restaurant Lunawada Logo" loading="lazy" />
               </div>
               <div className="footer-social-links">
                 <span className="label">Follow us :</span>
@@ -49,7 +49,7 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6">
                 <div className="info-box">
                   <div className="icon">
-                    <img src="/assets/images/ii1.png" alt="Contact Teja Hotel Lunawada - Phone icon" />
+                    <img src="/assets/images/ii1.png" alt="Contact Teja Hotel Lunawada - Phone icon" loading="lazy" />
                   </div>
                   <p>Phone Number:</p>
                   <p>9104009138</p>
@@ -58,7 +58,7 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6">
                 <div className="info-box">
                   <div className="icon">
-                    <img src="/assets/images/ii2.png" alt="Teja Hotel location in Lunawada, Mahisagar - Location icon" />
+                    <img src="/assets/images/ii2.png" alt="Teja Hotel location in Lunawada, Mahisagar - Location icon" loading="lazy" />
                   </div>
                   <p>
                     GJ SH 175, Modasa - Godhra Hwy
@@ -81,7 +81,7 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6">
                 <div className="info-box">
                   <div className="icon">
-                    <img src="/assets/images/ii3.png" alt="Contact Teja Hotel Lunawada - Email icon" />
+                    <img src="/assets/images/ii3.png" alt="Contact Teja Hotel Lunawada - Email icon" loading="lazy" />
                   </div>
                   <p>Drop us a line:</p>
                   <p>tejahotel11@gmail.com</p>
