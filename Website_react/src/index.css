@@ -2,6 +2,19 @@
 /* Note: In Vite, public assets are served from root, so we reference them in index.html */
 /* CSS imports are handled via link tags in index.html for better performance */
 
+/* Screen Reader Only - For SEO and Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* Clean Header - Centered Logo Only */
 .header-section {
   background: rgba(0, 0, 0, 0.1);
