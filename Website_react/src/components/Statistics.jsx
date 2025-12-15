@@ -5,22 +5,22 @@ const Statistics = () => {
     {
       id: 1,
       name: 'Punjabi',
-      image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80'
+      image: '/assets/images/food/teja resturant punjabi.jpg'
     },
     {
       id: 2,
       name: 'Gujarati',
-      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=600&fit=crop&q=80'
+      image: '/assets/images/food/teja resturant gujarati.jpg'
     },
     {
       id: 3,
       name: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&q=80'
+      image: '/assets/images/food/teja resturant chinese.jpg'
     },
     {
       id: 4,
       name: 'South',
-      image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop&q=80'
+      image: '/assets/images/food/teja resturant south indian.jpg'
     }
   ]
 
