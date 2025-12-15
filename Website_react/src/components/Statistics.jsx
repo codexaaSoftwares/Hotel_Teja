@@ -1,32 +1,31 @@
 import { motion } from 'framer-motion'
 
 const Statistics = () => {
-  const cuisines = [
-    { icon: '/assets/images/OUR CUISINES.png', label: 'GUJARATI' },
-    { icon: '/assets/images/OUR CUISINES.png', label: 'PUNJABI' },
-    { icon: '/assets/images/OUR CUISINES.png', label: 'SOUTH' },
-    { icon: '/assets/images/OUR CUISINES.png', label: 'CHINESE' }
+  const categories = [
+    {
+      id: 1,
+      name: 'Punjabi',
+      image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80'
+    },
+    {
+      id: 2,
+      name: 'Gujarati',
+      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=600&fit=crop&q=80'
+    },
+    {
+      id: 3,
+      name: 'Chinese',
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&q=80'
+    },
+    {
+      id: 4,
+      name: 'South',
+      image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop&q=80'
+    }
   ]
 
   return (
     <section className="statistics-section" id="cuisines">
-      <style>{`
-        .statistics-section .stat-item {
-          transition: all 0.3s ease;
-          cursor: pointer;
-        }
-        .statistics-section .stat-item:hover {
-          transform: translateY(-10px);
-        }
-        .statistics-section .stat-item:hover .icon img {
-          transform: scale(1.1);
-          transition: transform 0.3s ease;
-        }
-        .statistics-section .stat-item:hover .info {
-          color: #dc3545;
-          font-weight: 600;
-        }
-      `}</style>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8">
@@ -65,20 +64,27 @@ const Statistics = () => {
         </div>
         <div className="statistics-wrapper">
           <div className="row">
-            {cuisines.map((cuisine, index) => (
-              <motion.div 
-                key={index} 
-                className="col-lg-3 col-md-6 col-sm-6 col-12"
+            {categories.map((category, index) => (
+              <motion.div
+                key={category.id}
+                className="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 mb-lg-0"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="stat-item">
-                  <div className="icon">
-                    <img src={cuisine.icon} alt={`${cuisine.label} cuisine at Teja Restaurant Lunawada, Mahisagar`} />
-                    <div className="stat-content">
-                      <span className="info">{cuisine.label}</span>
+                <div className="food-category-card">
+                  <div 
+                    className="category-image"
+                    style={{
+                      backgroundImage: `url('${category.image}')`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
+                  >
+                    <div className="category-overlay">
+                      <h3 className="category-name">{category.name}</h3>
                     </div>
                   </div>
                 </div>
