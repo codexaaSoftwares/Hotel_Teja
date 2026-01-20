@@ -87,6 +87,7 @@ Website_react/
 - ✅ 3D gallery carousel with coverflow effect
 - ✅ Auto-sliding hero banner with dynamic badges
 - ✅ Smooth animations with Framer Motion
+- ✅ Multiple booking platforms integration (MakeMyTrip, Goibibo, Booking.com, Zomato)
 
 ## 📝 Notes
 
@@ -94,6 +95,20 @@ Website_react/
 - The project uses the same CSS and JS files from the original HTML version
 - Some external scripts (jQuery, Bootstrap, etc.) are loaded dynamically
 - The menu data is stored in `src/data/menuData.js` for easy updates
+
+## 🔗 Booking Platforms
+
+The BookingPlatforms component integrates multiple booking platforms:
+- **MakeMyTrip** - Hotel booking with direct booking link
+- **Goibibo** - Hotel booking with direct booking link  
+- **Booking.com** - International hotel booking platform
+- **Zomato** - Food ordering platform
+
+All platforms use local HD logo images from `/public/assets/images/` for optimal performance:
+- `makemytrip-logo-hd.png`
+- `goibibo-logo-hd.png`
+- `booking.com.png`
+- `Zomato.png`
 
 ## 🎯 Recent Updates
 
@@ -108,6 +123,7 @@ Website_react/
 - **Footer.jsx**: Background image implementation
 - **Statistics.jsx**: Updated cuisine section with labels
 - **About.jsx**: Enhanced image display
+- **BookingPlatforms.jsx**: Multiple booking platforms with logos (MakeMyTrip, Goibibo, Booking.com, Zomato)
 
 ## 📦 Production Build
 
