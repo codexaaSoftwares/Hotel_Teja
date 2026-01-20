@@ -4,28 +4,48 @@ import { Helmet } from 'react-helmet-async'
 const BookingPlatforms = () => {
   const platforms = [
     { 
-      name: 'Zomato', 
-      type: 'food',
-      url: 'https://www.zomato.com/lunawada/teja-hotel-lunawada-locality/order',
-      color: '#E23744',
-      logo: 'https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png',
-      logoType: 'image'
+      name: 'MakeMyTrip', 
+      type: 'booking',
+      url: 'https://www.makemytrip.com/hotels/hotel-details/?hotelId=202512011654343204&_uCurrency=INR&cc=IN&checkin=02232026&checkout=02242026&city=CTLUN&country=IN&guid=409e3006-66f5-4886-ae5b-ccac059929fc&lat=23.11377&lng=73.61254&locusId=CTLUN&locusType=city&modifyDates=true&parentHostName=www.makemytrip.com&rank=2&roomStayQualifier=2e0e&rsc=1e2e0e&searchText=Lunavada&seoDS=true&seoReq=1768820169330&urlRequired=true&mtkeys=undefined',
+      color: '#FF6B35',
+      logo: '/assets/images/makemytrip-logo-hd.png',
+      logoType: 'image',
+      logoBg: 'transparent'
+    },
+    { 
+      name: 'Goibibo', 
+      type: 'booking',
+      url: 'https://www.goibibo.com/hotels/hotel-details/?checkin=20260214&checkout=20260215&roomString=1-2-0&searchText=Teja%20Hotel&locusId=CTLUN&locusType=city&cityCode=CTLUN&cc=IN&_uCurrency=INR&vcid=4705208758680405097&giHotelId=1408364890949198658&locationData=area|Lunawada$ARLUNAWA|L&mmtId=202512011654343204&sType=area',
+      color: '#FF6600',
+      logo: '/assets/images/goibibo-logo-hd.png',
+      logoType: 'image',
+      logoBg: 'transparent'
     },
     { 
       name: 'Booking.com', 
       type: 'booking',
       url: 'https://www.booking.com/hotel/in/teja-lunawada.html?aid=304142&label=gen173nr-10CAsobEINdGVqYS1sdW5hd2FkYUgzWARobIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCzYblyQbAAgHSAiRhMzE5OTJlNC05Yzk5LTRhMjQtOWFiOC02ZWM5NTMzOGM3MGTYAgHgAgE&sid=4286e817bfa83d425b0d8706e0d2ba5a&all_sr_blocks=1542568601_425618987_2_1_0&checkin=2025-12-16&checkout=2025-12-17&dest_id=-2102868&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1542568601_425618987_2_1_0&hpos=1&matching_block_id=1542568601_425618987_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1542568601_425618987_2_1_0__190000&srepoch=1765545565&srpvid=faf35dae1b820fff&type=total&ucfs=1&',
       color: '#003580',
-      logo: 'https://cf.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png',
-      logoType: 'image'
+      logo: '/assets/images/booking.com.png',
+      logoType: 'image',
+      logoBg: 'transparent'
+    },
+    { 
+      name: 'Zomato', 
+      type: 'food',
+      url: 'https://www.zomato.com/lunawada/teja-hotel-lunawada-locality/order',
+      color: '#E23744',
+      logo: '/assets/images/Zomato.png',
+      logoType: 'image',
+      logoBg: 'transparent'
     }
   ]
 
   return (
     <>
       <Helmet>
-        <meta name="description" content="Book hotel rooms in Lunawada, Mahisagar at Teja Hotel. Order food online from Zomato. Easy booking on Booking.com. Best hotel near Godhra-Lunawada highway." />
-        <meta name="keywords" content="book hotel Lunawada, hotel booking Lunawada, Teja Hotel booking, order food Lunawada, hotel rooms booking Mahisagar, Booking.com Lunawada, Zomato Lunawada" />
+        <meta name="description" content="Book hotel rooms in Lunawada, Mahisagar at Teja Hotel. Order food online from Zomato. Easy booking on Booking.com, MakeMyTrip, and Goibibo. Best hotel near Godhra-Lunawada highway." />
+        <meta name="keywords" content="book hotel Lunawada, hotel booking Lunawada, Teja Hotel booking, order food Lunawada, hotel rooms booking Mahisagar, Booking.com Lunawada, MakeMyTrip Lunawada, Goibibo Lunawada, Zomato Lunawada" />
         <link rel="canonical" href="https://www.hotelteja.in/#booking" />
       </Helmet>
       <section className="booking-platforms-section" id="booking" style={{ padding: '60px 0' }}>
@@ -59,7 +79,7 @@ const BookingPlatforms = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Book your room at Teja Hotel in Lunawada, Mahisagar. Order food online from Zomato. Easy booking on Booking.com.
+                  Book your room at Teja Hotel in Lunawada, Mahisagar. Order food online from Zomato. Easy booking on Booking.com, MakeMyTrip, and Goibibo.
                 </motion.p>
               </div>
             </div>
@@ -96,7 +116,12 @@ const BookingPlatforms = () => {
                           alt={platform.name}
                           className="platform-logo-img"
                           style={{
-                            filter: platform.logoBg === 'transparent' ? 'none' : 'brightness(0) invert(1)'
+                            filter: platform.logoBg === 'transparent' ? 'none' : 'brightness(0) invert(1)',
+                            maxWidth: '100%',
+                            maxHeight: '100%',
+                            width: 'auto',
+                            height: 'auto',
+                            display: 'block'
                           }}
                           onError={(e) => {
                             // Fallback to text if image fails to load
@@ -104,6 +129,7 @@ const BookingPlatforms = () => {
                             const fallback = e.target.nextSibling;
                             if (fallback) fallback.style.display = 'block';
                           }}
+                          loading="lazy"
                         />
                       ) : null}
                       <span className="logo-text" style={{ display: platform.logoType === 'image' ? 'none' : 'block' }}>
