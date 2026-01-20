@@ -90,6 +90,141 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        {/* Footer Navigation Links for SEO */}
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="footer-navigation" style={{
+              textAlign: 'center',
+              marginTop: '25px',
+              marginBottom: '20px',
+              paddingTop: '20px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.2)'
+            }}>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0,
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                gap: '12px 20px'
+              }}>
+                <li>
+                  <a 
+                    href="#" 
+                    onClick={(e) => {
+                      e.preventDefault()
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                    style={{ 
+                      color: 'rgba(255, 255, 255, 0.9)', 
+                      textDecoration: 'none',
+                      fontSize: '15px',
+                      fontWeight: '500',
+                      transition: 'color 0.3s ease',
+                      textTransform: 'none'
+                    }}
+                    onMouseEnter={(e) => e.target.style.color = '#fff'}
+                    onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.9)'}
+                    aria-label="Navigate to Home"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#restaurant" 
+                    style={{ 
+                      color: 'rgba(255, 255, 255, 0.9)', 
+                      textDecoration: 'none',
+                      fontSize: '15px',
+                      fontWeight: '500',
+                      transition: 'color 0.3s ease',
+                      textTransform: 'none'
+                    }}
+                    onMouseEnter={(e) => e.target.style.color = '#fff'}
+                    onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.9)'}
+                    aria-label="Navigate to Restaurant section"
+                  >
+                    Restaurant
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#rooms" 
+                    style={{ 
+                      color: 'rgba(255, 255, 255, 0.9)', 
+                      textDecoration: 'none',
+                      fontSize: '15px',
+                      fontWeight: '500',
+                      transition: 'color 0.3s ease',
+                      textTransform: 'none'
+                    }}
+                    onMouseEnter={(e) => e.target.style.color = '#fff'}
+                    onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.9)'}
+                    aria-label="Navigate to Rooms section"
+                  >
+                    Rooms
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#events" 
+                    style={{ 
+                      color: 'rgba(255, 255, 255, 0.9)', 
+                      textDecoration: 'none',
+                      fontSize: '15px',
+                      fontWeight: '500',
+                      transition: 'color 0.3s ease',
+                      textTransform: 'none'
+                    }}
+                    onMouseEnter={(e) => e.target.style.color = '#fff'}
+                    onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.9)'}
+                    aria-label="Navigate to Banquet section"
+                  >
+                    Banquet
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#booking" 
+                    style={{ 
+                      color: 'rgba(255, 255, 255, 0.9)', 
+                      textDecoration: 'none',
+                      fontSize: '15px',
+                      fontWeight: '500',
+                      transition: 'color 0.3s ease',
+                      textTransform: 'none'
+                    }}
+                    onMouseEnter={(e) => e.target.style.color = '#fff'}
+                    onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.9)'}
+                    aria-label="Navigate to Booking section"
+                  >
+                    Book
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#gallery" 
+                    style={{ 
+                      color: 'rgba(255, 255, 255, 0.9)', 
+                      textDecoration: 'none',
+                      fontSize: '15px',
+                      fontWeight: '500',
+                      transition: 'color 0.3s ease',
+                      textTransform: 'none'
+                    }}
+                    onMouseEnter={(e) => e.target.style.color = '#fff'}
+                    onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.9)'}
+                    aria-label="Navigate to Gallery section"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div className="row">
           <div className="col-lg-12">
             <div className="copyright-text">

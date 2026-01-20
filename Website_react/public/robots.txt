@@ -17,6 +17,8 @@ Allow: /#restaurant
 Allow: /#gallery
 Allow: /#events
 Allow: /#about
+Allow: /#cuisines
+Allow: /#booking
 
 # Sitemap location
 Sitemap: https://www.hotelteja.in/sitemap.xml

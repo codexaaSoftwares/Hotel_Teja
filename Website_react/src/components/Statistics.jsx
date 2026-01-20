@@ -54,7 +54,7 @@ const Statistics = () => {
   return (
     <>
       <Helmet>
-        <title>Our Cuisines - Punjabi, Gujarati, Chinese & South Indian Food | Teja Restaurant Lunawada</title>
+        {/* Meta tags only - title is set by main page Banner component */}
         <meta name="description" content="Explore our cuisines at Teja Restaurant in Lunawada, Mahisagar. Best Punjabi food, authentic Gujarati cuisine, Chinese dishes, and South Indian food. Traditional flavors in Lunawada, Gujarat." />
         <meta name="keywords" content="Punjabi food Lunawada, Gujarati food Lunawada, Chinese food Lunawada, South Indian food Lunawada, best restaurant Lunawada, Teja Restaurant cuisines, Mahisagar restaurant" />
         <link rel="canonical" href="https://www.hotelteja.in/#cuisines" />
